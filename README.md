@@ -16,8 +16,8 @@ Default container factory provides generic functionality on demand such as loggi
 
 Quick Links:
 
-* [Downloads](https://github.com/pip-services/pip-services-container-node/blob/master/doc/Downloads.md)
-* [API Reference](http://htmlpreview.github.io/?https://github.com/pip-services/pip-services-container-node/blob/master/doc/api/index.html)
+* [Downloads](https://github.com/pip-services-node/pip-services-container-node/blob/master/doc/Downloads.md)
+* [API Reference](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/index.html)
 * [Building and Testing](https://github.com/pip-services/pip-services-container-node/blob/master/doc/Development.md)
 * [Contributing](https://github.com/pip-services/pip-services-container-node/blob/master/doc/Development.md/#contrib)
 
