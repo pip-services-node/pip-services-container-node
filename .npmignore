@@ -4,8 +4,7 @@
 /obj/test
 /data
 /doc
-/Dockerfile*
-/docker-compose*
+/docker
 /.dockerignore
 /*.sh
 /*.ps1

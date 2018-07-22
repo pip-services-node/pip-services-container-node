@@ -19,7 +19,7 @@
     "noAnalyze": true,
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com:pip-services/pip-services-container-node.git"
+        "url": "ssh://git@github.com:pip-services-node/pip-services-container-node.git"
     },
     "license": "MIT",
     "engines": {

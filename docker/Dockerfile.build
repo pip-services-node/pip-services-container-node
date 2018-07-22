@@ -1,4 +1,7 @@
-FROM pipdevs/ts-dev:2.5.2
+FROM node:8
+
+# Install development tools
+RUN npm install typescript -g
 
 # set working directory
 WORKDIR /app
@@ -10,5 +13,6 @@ RUN npm install
 
 # copy all project
 COPY . .
+
 # compile source code
-RUN  tsc
+RUN tsc

@@ -4,7 +4,7 @@
 /.dockerignore
 /doc
 /node_modules
-/Dockerfile*
-/docker-compose*.yml
+/doc
+/docker
 /*.sh
 /*.ps1
