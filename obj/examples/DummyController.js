@@ -27,7 +27,7 @@ class DummyController {
     setReferences(references) {
         this._logger.setReferences(references);
     }
-    isOpened() {
+    isOpen() {
         return this._timer.isStarted();
     }
     open(correlationId, callback) {

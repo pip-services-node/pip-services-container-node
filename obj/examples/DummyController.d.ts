@@ -15,7 +15,7 @@ export declare class DummyController implements IReferenceable, IReconfigurable,
     counter: number;
     configure(config: ConfigParams): void;
     setReferences(references: IReferences): void;
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
     notify(correlationId: string, args: Parameters): void;

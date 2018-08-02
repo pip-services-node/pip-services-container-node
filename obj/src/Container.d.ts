@@ -20,8 +20,8 @@ export declare class Container implements IConfigurable, IReferenceable, IUnrefe
     readConfigFromFile(correlationId: string, path: string, parameters: ConfigParams): void;
     setReferences(references: IReferences): void;
     unsetReferences(): void;
-    private initReferences(references);
-    isOpened(): boolean;
+    private initReferences;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
 }

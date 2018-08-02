@@ -7,7 +7,7 @@ class LinkReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator 
         super(baseReferences, parentReferences);
         this._opened = false;
     }
-    isOpened() {
+    isOpen() {
         return this._opened;
     }
     open(correlationId, callback) {

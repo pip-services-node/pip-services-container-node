@@ -10,7 +10,7 @@ export declare class ManagedReferences extends ReferencesDecorator implements IO
     protected _linker: LinkReferencesDecorator;
     protected _runner: RunReferencesDecorator;
     constructor(tuples?: any[]);
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
     static fromTuples(...tuples: any[]): ManagedReferences;

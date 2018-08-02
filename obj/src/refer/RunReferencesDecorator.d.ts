@@ -4,7 +4,7 @@ import { ReferencesDecorator } from './ReferencesDecorator';
 export declare class RunReferencesDecorator extends ReferencesDecorator implements IOpenable {
     _opened: boolean;
     constructor(baseReferences: IReferences, parentReferences: IReferences);
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
     put(locator: any, component: any): void;

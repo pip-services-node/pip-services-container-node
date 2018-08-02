@@ -38,7 +38,7 @@ class Container {
             this._info = existingInfo;
         references.put(DefaultContainerFactory_1.DefaultContainerFactory.Descriptor, this._factories);
     }
-    isOpened() {
+    isOpen() {
         return this._references != null;
     }
     open(correlationId, callback) {

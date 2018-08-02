@@ -14,8 +14,8 @@ class ManagedReferences extends ReferencesDecorator_1.ReferencesDecorator {
         this._runner = new RunReferencesDecorator_1.RunReferencesDecorator(this._linker, this);
         this.baseReferences = this._runner;
     }
-    isOpened() {
-        return this._linker.isOpened() && this._runner.isOpened();
+    isOpen() {
+        return this._linker.isOpen() && this._runner.isOpen();
     }
     open(correlationId, callback) {
         this._linker.open(correlationId, (err) => {

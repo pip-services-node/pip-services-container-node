@@ -11,7 +11,7 @@ export class LinkReferencesDecorator extends ReferencesDecorator implements IOpe
     	super(baseReferences, parentReferences);
     }
 
-    public isOpened(): boolean {
+    public isOpen(): boolean {
         return this._opened;
     }
 

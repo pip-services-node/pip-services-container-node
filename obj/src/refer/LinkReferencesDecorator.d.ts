@@ -4,7 +4,7 @@ import { ReferencesDecorator } from './ReferencesDecorator';
 export declare class LinkReferencesDecorator extends ReferencesDecorator implements IOpenable {
     private _opened;
     constructor(baseReferences: IReferences, parentReferences: IReferences);
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
     put(locator: any, component: any): any;

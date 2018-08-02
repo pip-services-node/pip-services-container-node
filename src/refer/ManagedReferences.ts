@@ -23,8 +23,8 @@ export class ManagedReferences extends ReferencesDecorator implements IOpenable 
         this.baseReferences = this._runner;
     }
 
-    public isOpened(): boolean {
-        return this._linker.isOpened() && this._runner.isOpened();
+    public isOpen(): boolean {
+        return this._linker.isOpen() && this._runner.isOpen();
     }
     
     public open(correlationId: string, callback?: (err: any) => void): void {

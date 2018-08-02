@@ -8,13 +8,13 @@ class RunReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator {
         super(baseReferences, parentReferences);
         this._opened = false;
     }
-    isOpened() {
+    isOpen() {
         return this._opened;
     }
     open(correlationId, callback) {
         if (!this._opened) {
             let components = this.getAll();
-            pip_services_commons_node_1.Opener.open(correlationId, components, (err) => {
+            pip_services_commons_node_1.Opener.openMany(correlationId, components, (err) => {
                 if (err == null)
                     this._opened = true;
                 if (callback)

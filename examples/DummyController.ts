@@ -40,7 +40,7 @@ export class DummyController implements IReferenceable, IReconfigurable, IOpenab
         this._logger.setReferences(references);
     }
 
-    public isOpened(): boolean {
+    public isOpen(): boolean {
         return this._timer.isStarted();
     }
 

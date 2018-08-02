@@ -56,7 +56,7 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
         references.put(DefaultContainerFactory.Descriptor, this._factories);
     }
 
-    public isOpened(): boolean {
+    public isOpen(): boolean {
         return this._references != null;
     }
 
