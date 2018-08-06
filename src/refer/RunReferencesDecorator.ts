@@ -20,7 +20,7 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     public open(correlationId: string, callback?: (err: any) => void): void {
         if (!this._opened) {
             let components = this.getAll();
-            Opener.openMany(correlationId, components, (err) => {
+            Opener.open(correlationId, components, (err) => {
                 if (err == null)
                     this._opened = true;
                 if (callback) callback(err);
