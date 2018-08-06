@@ -67,6 +67,22 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Helper class that contains static methods for reading <a href="config.containerconfig.html">container configurations</a> from
+						JSON and YAML files.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html" class="external">JsonConfigReader</a> (in the PipServices &quot;Components&quot; Package)</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html" class="external">YamlConfigReader</a> (in the PipServices &quot;Components&quot; Package)</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -102,19 +118,48 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/config/ContainerConfigReader.ts#L11">config/ContainerConfigReader.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/config/ContainerConfigReader.ts#L34">config/ContainerConfigReader.ts:34</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Static method that reads the JSON/YAML data from the file and returns it as a parameterized
+										<a href="config.containerconfig.html">ContainerConfig</a> object. If the target file&#39;s extention is not &quot;.json&quot;, &quot;.yaml&quot;, or &quot;.yml&quot;,
+									then the reader will default to using the <a href="config.containerconfigreader.html#readfromjsonfile">readFromJsonFile</a> method.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>a <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.configexception.html" class="external">ConfigException</a>
+										if the path is <code>null</code>.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfigreader.html#readfromjsonfile">readFromJsonFile</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfigreader.html#readfromyamlfile">readFromYamlFile</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the path to the target file, containing configuration parameters.
+										Must not be <code>null</code>.</p>
+									</div>
 								</li>
 								<li>
 									<h5>parameters: <span class="tsd-signature-type">ConfigParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>used to parameterize the ConfigReader.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h4>
@@ -131,19 +176,45 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/config/ContainerConfigReader.ts#L27">config/ContainerConfigReader.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/config/ContainerConfigReader.ts#L62">config/ContainerConfigReader.ts:62</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Static method that reads the JSON data from the file and returns it as a parameterized <a href="config.containerconfig.html">ContainerConfig</a>
+									object.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html#readconfig" class="external">JsonConfigReader.readConfig</a> (in the PipServices &quot;Components&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfig.html#fromconfig">ContainerConfig.fromConfig</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the path to the target file, containing configuration parameters in JSON format.</p>
+									</div>
 								</li>
 								<li>
 									<h5>parameters: <span class="tsd-signature-type">ConfigParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>used to parameterize the JsonConfigReader.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h4>
@@ -160,19 +231,45 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/config/ContainerConfigReader.ts#L32">config/ContainerConfigReader.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/config/ContainerConfigReader.ts#L79">config/ContainerConfigReader.ts:79</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Static method that reads the YAML data from the file and returns it as a parameterized <a href="config.containerconfig.html">ContainerConfig</a>
+									object.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html#readconfig" class="external">YamlConfigReader.readConfig</a> (in the PipServices &quot;Components&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfig.html#fromconfig">ContainerConfig.fromConfig</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the path to the target file, containing configuration parameters in YAML format.</p>
+									</div>
 								</li>
 								<li>
 									<h5>parameters: <span class="tsd-signature-type">ConfigParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>used to parameterize the YamlConfigReader.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h4>

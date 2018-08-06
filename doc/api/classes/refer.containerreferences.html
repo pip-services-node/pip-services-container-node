@@ -67,6 +67,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Stores a container&#39;s complete set of references.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="refer.managedreferences.html">ManagedReferences</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -145,13 +157,43 @@
 								<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#constructor">constructor</a></p>
 								<p>Overrides <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L14">refer/ManagedReferences.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L23">refer/ManagedReferences.ts:23</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new ManagedReferences object using the provided tuples array of
+										references. This constructor passed the tuples array to <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor" class="external">References&#39; constructor</a>,
+										the result of which is passed to <a href="refer.buildreferencesdecorator.html#constructor">BuildReferencesDecorator&#39;s constructor</a>
+										(the created &quot;References&quot; are passed as baseReferences and this object itself is passed as &quot;parent references&quot;),
+										the result of which is passed to <a href="refer.linkreferencesdecorator.html#constructor">LinkReferencesDecorator&#39;s constructor</a>,
+										the result of which is passed to <a href="refer.runreferencesdecorator.html#constructor">RunReferencesDecorator&#39;s constructor</a>,
+									the result of which is set as this object&#39;s base references.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor" class="external">References&#39; constructor</a> (in the PipServices &quot;Commons&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="refer.buildreferencesdecorator.html#constructor">BuildReferencesDecorator&#39;s constructor</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="refer.linkreferencesdecorator.html#constructor">LinkReferencesDecorator&#39;s constructor</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="refer.runreferencesdecorator.html#constructor">RunReferencesDecorator&#39;s constructor</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> tuples: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>the references to initialize the new object with.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="refer.containerreferences.html" class="tsd-signature-type">ContainerReferences</a></h4>
@@ -168,7 +210,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#_builder">_builder</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L12">refer/ManagedReferences.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L21">refer/ManagedReferences.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -179,7 +221,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#_linker">_linker</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L13">refer/ManagedReferences.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L22">refer/ManagedReferences.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -190,7 +232,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#_references">_references</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L11">refer/ManagedReferences.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L20">refer/ManagedReferences.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -201,7 +243,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#_runner">_runner</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L14">refer/ManagedReferences.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L23">refer/ManagedReferences.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -212,7 +254,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#basereferences">baseReferences</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L11">refer/ReferencesDecorator.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L23">refer/ReferencesDecorator.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +265,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#parentreferences">parentReferences</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L12">refer/ReferencesDecorator.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L24">refer/ReferencesDecorator.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -241,16 +283,28 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#close">close</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L39">refer/ManagedReferences.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L87">refer/ManagedReferences.ts:87</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Closes all run references and, if they are successfully closed, unsets all links references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) the function to call when the closing process is complete.
+										It will be called with an error if one is raised.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
 											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
@@ -286,9 +340,14 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#find">find</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L60">refer/ReferencesDecorator.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L139">refer/ReferencesDecorator.ts:139</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Finds all references that match the specified query criteria and the specified type.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -299,12 +358,19 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find a reference by.</p>
+									</div>
 								</li>
 								<li>
 									<h5>required: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>forces to raise an exception if no reference is found.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list of found references.</p>
 						</li>
 					</ul>
 				</section>
@@ -319,10 +385,16 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getall">getAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L30">refer/ReferencesDecorator.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L73">refer/ReferencesDecorator.ts:73</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets all stored component references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list, containing all stored component references.</p>
 						</li>
 					</ul>
 				</section>
@@ -337,10 +409,16 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getalllocators">getAllLocators</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L26">refer/ReferencesDecorator.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L64">refer/ReferencesDecorator.ts:64</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets all stored component locators.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list, containing the locators for all of the stored component references.</p>
 						</li>
 					</ul>
 				</section>
@@ -355,9 +433,15 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getoneoptional">getOneOptional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L34">refer/ReferencesDecorator.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L84">refer/ReferencesDecorator.ts:84</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a component references that matches the provided locator and the specified type. The search
+									is performed, starting from the last-added references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -368,9 +452,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find a reference by.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>the first found component reference or <code>null</code> (if none were found).</p>
 						</li>
 					</ul>
 				</section>
@@ -385,9 +473,16 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getonerequired">getOneRequired</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L43">refer/ReferencesDecorator.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L102">refer/ReferencesDecorator.ts:102</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a component reference that matches the provided locator and the specified type.
+									The search is performed, starting from the last-added references.</p>
+								</div>
+								<p>If no references are found, an exception will be thrown.</p>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -398,9 +493,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find a reference by.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>the first found component reference.</p>
 						</li>
 					</ul>
 				</section>
@@ -415,9 +514,14 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getoptional">getOptional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L48">refer/ReferencesDecorator.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L113">refer/ReferencesDecorator.ts:113</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a list of component references that match the provided locator and the specified type.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -428,9 +532,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find references by.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list, containing all component references found.</p>
 						</li>
 					</ul>
 				</section>
@@ -445,9 +553,15 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getrequired">getRequired</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L56">refer/ReferencesDecorator.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L128">refer/ReferencesDecorator.ts:128</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a list of component references that match the provided locator and the specified type.
+									If no references are found, an exception will be thrown.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -458,9 +572,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find references by.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list, containing all component references found.</p>
 						</li>
 					</ul>
 				</section>
@@ -475,10 +593,14 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#isopen">isOpen</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L27">refer/ManagedReferences.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L58">refer/ManagedReferences.ts:58</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>whether or not all link references were set and all run references
+							were successfully opened.</p>
 						</li>
 					</ul>
 				</section>
@@ -493,16 +615,28 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#open">open</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L31">refer/ManagedReferences.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L70">refer/ManagedReferences.ts:70</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets all links references and, if they are successfully set, opens all run references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) the function to call when the opening process is complete.
+										It will be called with an error if one is raised.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
 											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
@@ -538,16 +672,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#put">put</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L14">refer/ReferencesDecorator.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L32">refer/ReferencesDecorator.ts:32</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Puts a new component reference into the base set of references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to find the reference by.</p>
+									</div>
 								</li>
 								<li>
 									<h5>component: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the component reference that is to be added.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -564,13 +709,71 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ContainerReferences.ts#L14">refer/ContainerReferences.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ContainerReferences.ts#L54">refer/ContainerReferences.ts:54</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds <a href="config.componentconfig.html">component configurations</a> to this ContainerReferences object.</p>
+								</div>
+								<p>For each <a href="config.componentconfig.html">component configuration</a> in the passed <a href="config.containerconfig.html">container configuration</a>
+								the following is done:</p>
+								<ul>
+									<li>References are set:<ul>
+											<li>if the ComponentConfig contains a &quot;type&quot; - an attempt will be made to create the component
+											dynamically.</li>
+											<li>otherwise, if the ComponentConfig contains a &quot;descriptor&quot; - an attempt will be made to create
+											the component using the stored locator-<a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html" class="external">Descriptor</a>.</li>
+											<li>if the component was successfully created - it is added to this object&#39;s list of references.</li>
+										</ul>
+									</li>
+									<li>The component is setup:<ul>
+											<li>if the component <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html" class="external">is configurable</a> -
+											it will be configured using the ComponentConfig&#39;s &quot;config&quot;.</li>
+											<li>if the component <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html" class="external">can reference</a>
+											other components (factories) - it will be set to reference this ContainerReferences object.</li>
+										</ul>
+									</li>
+								</ul>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfig.html">ContainerConfig</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="config.componentconfig.html">ComponentConfig</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html" class="external">Descriptor</a> (in the PipServices &quot;Commons&quot; package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html" class="external">IConfigurable</a> (in the PipServices &quot;Commons&quot; package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html" class="external">IReferenceable</a> (in the PipServices &quot;Commons&quot; package)</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>a <a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/build.createexception.html" class="external">CreateException</a>
+											if the component cannot be created using one of the ContainerConfig&#39;s ComponentConfig&#39;s
+										(explicit) &quot;type&quot; or &quot;descriptor&quot; (locator).</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>a <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referenceexception.html" class="external">ReferenceException</a>
+											if an object cannot be created by one of the ContainerConfig&#39;s ComponentConfig&#39;s descriptor
+										(locator).</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>a <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referenceexception.html" class="external">ReferenceException</a>
+										if any other exception is raised.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>config: <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ContainerConfig, whose <a href="config.componentconfig.html">ComponentConfigs</a> are to be added.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -588,16 +791,30 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L18">refer/ReferencesDecorator.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L44">refer/ReferencesDecorator.ts:44</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a component reference from the base set of references.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="refer.containerreferences.html#removeall">removeAll</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator of the reference that is to be removed.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>the removed reference.</p>
 						</li>
 					</ul>
 				</section>
@@ -612,16 +829,26 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#removeall">removeAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ReferencesDecorator.ts#L22">refer/ReferencesDecorator.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ReferencesDecorator.ts#L55">refer/ReferencesDecorator.ts:55</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all component references with the given locator from the base
+									set of references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the locator to remove references by.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list, containing all removed references.</p>
 						</li>
 					</ul>
 				</section>
@@ -636,13 +863,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="refer.managedreferences.html">ManagedReferences</a>.<a href="refer.managedreferences.html#fromtuples">fromTuples</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/565d0ea/src/refer/ManagedReferences.ts#L47">refer/ManagedReferences.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/refer/ManagedReferences.ts#L103">refer/ManagedReferences.ts:103</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Static method for generating a ManagedReferences object using the provided
+									tuples arrays.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="refer.containerreferences.html#constructor">constructor</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>tuples: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the tuples arrays to initialize the new object with.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="refer.managedreferences.html" class="tsd-signature-type">ManagedReferences</a></h4>
