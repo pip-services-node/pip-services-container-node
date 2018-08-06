@@ -1,3 +1,4 @@
+/** @module core */
 export * from './build';
 export * from './config';
 export * from './refer';

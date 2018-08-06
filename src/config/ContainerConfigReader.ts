@@ -1,3 +1,4 @@
+/** @module config */
 import { JsonConfigReader } from 'pip-services-components-node';
 import { YamlConfigReader } from 'pip-services-components-node';
 import { ConfigException } from 'pip-services-commons-node';

@@ -1,3 +1,4 @@
+/** @module refer */
 import { TypeReflector } from 'pip-services-commons-node';
 import { ReferenceException } from 'pip-services-commons-node';
 import { IConfigurable } from 'pip-services-commons-node';

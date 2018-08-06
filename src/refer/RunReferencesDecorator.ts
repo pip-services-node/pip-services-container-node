@@ -1,3 +1,4 @@
+/** @module refer */
 import { IReferences } from 'pip-services-commons-node';
 import { Opener } from 'pip-services-commons-node';
 import { Closer } from 'pip-services-commons-node';

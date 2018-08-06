@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BuildReferencesDecorator | pip-services-container-node</title>
+	<title>LinkReferencesDecorator | pip-services-container-node</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="buildreferencesdecorator.html">BuildReferencesDecorator</a>
+					<a href="../modules/refer.html">refer</a>
+				</li>
+				<li>
+					<a href="refer.linkreferencesdecorator.html">LinkReferencesDecorator</a>
 				</li>
 			</ul>
-			<h1>Class BuildReferencesDecorator</h1>
+			<h1>Class LinkReferencesDecorator</h1>
 		</div>
 	</div>
 </header>
@@ -68,10 +71,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="referencesdecorator.html" class="tsd-signature-type">ReferencesDecorator</a>
+						<a href="refer.referencesdecorator.html" class="tsd-signature-type">ReferencesDecorator</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">BuildReferencesDecorator</span>
+								<span class="target">LinkReferencesDecorator</span>
 							</li>
 						</ul>
 					</li>
@@ -81,6 +84,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><span class="tsd-signature-type">IReferences</span></li>
+					<li><span class="tsd-signature-type">IOpenable</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -90,32 +94,33 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="buildreferencesdecorator.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="refer.linkreferencesdecorator.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#basereferences" class="tsd-kind-icon">base<wbr>References</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#parentreferences" class="tsd-kind-icon">parent<wbr>References</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="refer.linkreferencesdecorator.html#_opened" class="tsd-kind-icon">_opened</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#basereferences" class="tsd-kind-icon">base<wbr>References</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#parentreferences" class="tsd-kind-icon">parent<wbr>References</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="buildreferencesdecorator.html#clarifylocator" class="tsd-kind-icon">clarify<wbr>Locator</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="buildreferencesdecorator.html#create" class="tsd-kind-icon">create</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="buildreferencesdecorator.html#find" class="tsd-kind-icon">find</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="buildreferencesdecorator.html#findfactory" class="tsd-kind-icon">find<wbr>Factory</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#getall" class="tsd-kind-icon">get<wbr>All</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#getalllocators" class="tsd-kind-icon">get<wbr>All<wbr>Locators</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="buildreferencesdecorator.html#getoneoptional" class="tsd-kind-icon">get<wbr>One<wbr>Optional</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="buildreferencesdecorator.html#getonerequired" class="tsd-kind-icon">get<wbr>One<wbr>Required</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="buildreferencesdecorator.html#getoptional" class="tsd-kind-icon">get<wbr>Optional</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="buildreferencesdecorator.html#getrequired" class="tsd-kind-icon">get<wbr>Required</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#put" class="tsd-kind-icon">put</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="buildreferencesdecorator.html#removeall" class="tsd-kind-icon">remove<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="refer.linkreferencesdecorator.html#close" class="tsd-kind-icon">close</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getall" class="tsd-kind-icon">get<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getalllocators" class="tsd-kind-icon">get<wbr>All<wbr>Locators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getoneoptional" class="tsd-kind-icon">get<wbr>One<wbr>Optional</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getonerequired" class="tsd-kind-icon">get<wbr>One<wbr>Required</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getoptional" class="tsd-kind-icon">get<wbr>Optional</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="refer.linkreferencesdecorator.html#getrequired" class="tsd-kind-icon">get<wbr>Required</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="refer.linkreferencesdecorator.html#isopen" class="tsd-kind-icon">is<wbr>Open</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="refer.linkreferencesdecorator.html#open" class="tsd-kind-icon">open</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="refer.linkreferencesdecorator.html#put" class="tsd-kind-icon">put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="refer.linkreferencesdecorator.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="refer.linkreferencesdecorator.html#removeall" class="tsd-kind-icon">remove<wbr>All</a></li>
 							</ul>
 						</section>
 					</div>
@@ -127,14 +132,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Build<wbr>References<wbr>Decorator<span class="tsd-signature-symbol">(</span>baseReferences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IReferences</span>, parentReferences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IReferences</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="buildreferencesdecorator.html" class="tsd-signature-type">BuildReferencesDecorator</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Link<wbr>References<wbr>Decorator<span class="tsd-signature-symbol">(</span>baseReferences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IReferences</span>, parentReferences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IReferences</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="refer.linkreferencesdecorator.html" class="tsd-signature-type">LinkReferencesDecorator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#constructor">constructor</a></p>
+								<p>Overrides <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/BuildReferencesDecorator.ts#L10">refer/BuildReferencesDecorator.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L9">refer/LinkReferencesDecorator.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,21 +151,31 @@
 									<h5>parentReferences: <span class="tsd-signature-type">IReferences</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="buildreferencesdecorator.html" class="tsd-signature-type">BuildReferencesDecorator</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="refer.linkreferencesdecorator.html" class="tsd-signature-type">LinkReferencesDecorator</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_opened" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _opened</h3>
+					<div class="tsd-signature tsd-kind-icon">_opened<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L9">refer/LinkReferencesDecorator.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="basereferences" class="tsd-anchor"></a>
 					<h3>base<wbr>References</h3>
 					<div class="tsd-signature tsd-kind-icon">base<wbr>References<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IReferences</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#basereferences">baseReferences</a></p>
+						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#basereferences">baseReferences</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L10">refer/ReferencesDecorator.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L11">refer/ReferencesDecorator.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -169,9 +184,9 @@
 					<h3>parent<wbr>References</h3>
 					<div class="tsd-signature tsd-kind-icon">parent<wbr>References<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IReferences</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#parentreferences">parentReferences</a></p>
+						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#parentreferences">parentReferences</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L11">refer/ReferencesDecorator.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L12">refer/ReferencesDecorator.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -179,69 +194,61 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="clarifylocator" class="tsd-anchor"></a>
-					<h3>clarify<wbr>Locator</h3>
+					<a name="close" class="tsd-anchor"></a>
+					<h3>close</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">clarify<wbr>Locator<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, factory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IFactory</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/BuildReferencesDecorator.ts#L39">refer/BuildReferencesDecorator.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L29">refer/LinkReferencesDecorator.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>locator: <span class="tsd-signature-type">any</span></h5>
+									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>factory: <span class="tsd-signature-type">IFactory</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="create" class="tsd-anchor"></a>
-					<h3>create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, factory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IFactory</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/BuildReferencesDecorator.ts#L28">refer/BuildReferencesDecorator.ts:28</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>locator: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>factory: <span class="tsd-signature-type">IFactory</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="find" class="tsd-anchor"></a>
 					<h3>find</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">find&lt;T&gt;<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, required<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#find">find</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#find">find</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/BuildReferencesDecorator.ts#L59">refer/BuildReferencesDecorator.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L60">refer/ReferencesDecorator.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -263,29 +270,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="findfactory" class="tsd-anchor"></a>
-					<h3>find<wbr>Factory</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Factory<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IFactory</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/BuildReferencesDecorator.ts#L15">refer/BuildReferencesDecorator.ts:15</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>locator: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IFactory</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getall" class="tsd-anchor"></a>
 					<h3>get<wbr>All</h3>
@@ -295,9 +279,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getall">getAll</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getall">getAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L29">refer/ReferencesDecorator.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L30">refer/ReferencesDecorator.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -313,9 +297,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getalllocators">getAllLocators</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getalllocators">getAllLocators</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L25">refer/ReferencesDecorator.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L26">refer/ReferencesDecorator.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -331,9 +315,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getoneoptional">getOneOptional</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getoneoptional">getOneOptional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L33">refer/ReferencesDecorator.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L34">refer/ReferencesDecorator.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -361,9 +345,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getonerequired">getOneRequired</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getonerequired">getOneRequired</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L42">refer/ReferencesDecorator.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L43">refer/ReferencesDecorator.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -391,9 +375,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getoptional">getOptional</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getoptional">getOptional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L47">refer/ReferencesDecorator.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L48">refer/ReferencesDecorator.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -421,9 +405,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#getrequired">getRequired</a></p>
+								<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#getrequired">getRequired</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L55">refer/ReferencesDecorator.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/ReferencesDecorator.ts#L56">refer/ReferencesDecorator.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -442,18 +426,79 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isopen" class="tsd-anchor"></a>
+					<h3>is<wbr>Open</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Open<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L15">refer/LinkReferencesDecorator.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="open" class="tsd-anchor"></a>
+					<h3>open</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">(</span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L19">refer/LinkReferencesDecorator.ts:19</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="put" class="tsd-anchor"></a>
 					<h3>put</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">put<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, component<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#put">put</a></p>
+								<p>Overrides <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#put">put</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L13">refer/ReferencesDecorator.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L39">refer/LinkReferencesDecorator.ts:39</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -469,18 +514,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#remove">remove</a></p>
+								<p>Overrides <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L17">refer/ReferencesDecorator.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L46">refer/LinkReferencesDecorator.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -493,18 +538,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="removeall" class="tsd-anchor"></a>
 					<h3>remove<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">remove<wbr>All<span class="tsd-signature-symbol">(</span>locator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="referencesdecorator.html">ReferencesDecorator</a>.<a href="referencesdecorator.html#removeall">removeAll</a></p>
+								<p>Overrides <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#removeall">removeAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/34edf1b/src/refer/ReferencesDecorator.ts#L21">refer/ReferencesDecorator.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/a3e5ed0/src/refer/LinkReferencesDecorator.ts#L55">refer/LinkReferencesDecorator.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -525,105 +570,96 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/build.html">build</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/config.html">config</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/container.html">container</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/refer.html">refer</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.buildreferencesdecorator.html" class="tsd-kind-icon">Build<wbr>References<wbr>Decorator</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.containerreferences.html" class="tsd-kind-icon">Container<wbr>References</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="buildreferencesdecorator.html" class="tsd-kind-icon">Build<wbr>References<wbr>Decorator</a>
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.linkreferencesdecorator.html" class="tsd-kind-icon">Link<wbr>References<wbr>Decorator</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="buildreferencesdecorator.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="refer.linkreferencesdecorator.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="refer.linkreferencesdecorator.html#_opened" class="tsd-kind-icon">_opened</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#basereferences" class="tsd-kind-icon">base<wbr>References</a>
+								<a href="refer.linkreferencesdecorator.html#basereferences" class="tsd-kind-icon">base<wbr>References</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#parentreferences" class="tsd-kind-icon">parent<wbr>References</a>
+								<a href="refer.linkreferencesdecorator.html#parentreferences" class="tsd-kind-icon">parent<wbr>References</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="buildreferencesdecorator.html#clarifylocator" class="tsd-kind-icon">clarify<wbr>Locator</a>
+								<a href="refer.linkreferencesdecorator.html#close" class="tsd-kind-icon">close</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#find" class="tsd-kind-icon">find</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getall" class="tsd-kind-icon">get<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getalllocators" class="tsd-kind-icon">get<wbr>All<wbr>Locators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getoneoptional" class="tsd-kind-icon">get<wbr>One<wbr>Optional</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getonerequired" class="tsd-kind-icon">get<wbr>One<wbr>Required</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getoptional" class="tsd-kind-icon">get<wbr>Optional</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="refer.linkreferencesdecorator.html#getrequired" class="tsd-kind-icon">get<wbr>Required</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="buildreferencesdecorator.html#create" class="tsd-kind-icon">create</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-								<a href="buildreferencesdecorator.html#find" class="tsd-kind-icon">find</a>
+								<a href="refer.linkreferencesdecorator.html#isopen" class="tsd-kind-icon">is<wbr>Open</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="buildreferencesdecorator.html#findfactory" class="tsd-kind-icon">find<wbr>Factory</a>
+								<a href="refer.linkreferencesdecorator.html#open" class="tsd-kind-icon">open</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getall" class="tsd-kind-icon">get<wbr>All</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="refer.linkreferencesdecorator.html#put" class="tsd-kind-icon">put</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getalllocators" class="tsd-kind-icon">get<wbr>All<wbr>Locators</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="refer.linkreferencesdecorator.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getoneoptional" class="tsd-kind-icon">get<wbr>One<wbr>Optional</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getonerequired" class="tsd-kind-icon">get<wbr>One<wbr>Required</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getoptional" class="tsd-kind-icon">get<wbr>Optional</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#getrequired" class="tsd-kind-icon">get<wbr>Required</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#put" class="tsd-kind-icon">put</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#remove" class="tsd-kind-icon">remove</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="buildreferencesdecorator.html#removeall" class="tsd-kind-icon">remove<wbr>All</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="refer.linkreferencesdecorator.html#removeall" class="tsd-kind-icon">remove<wbr>All</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="componentconfig.html" class="tsd-kind-icon">Component<wbr>Config</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.managedreferences.html" class="tsd-kind-icon">Managed<wbr>References</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="container.html" class="tsd-kind-icon">Container</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.referencesdecorator.html" class="tsd-kind-icon">References<wbr>Decorator</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="containerconfig.html" class="tsd-kind-icon">Container<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="containerconfigreader.html" class="tsd-kind-icon">Container<wbr>Config<wbr>Reader</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="containerreferences.html" class="tsd-kind-icon">Container<wbr>References</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="defaultcontainerfactory.html" class="tsd-kind-icon">Default<wbr>Container<wbr>Factory</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="linkreferencesdecorator.html" class="tsd-kind-icon">Link<wbr>References<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="managedreferences.html" class="tsd-kind-icon">Managed<wbr>References</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="processcontainer.html" class="tsd-kind-icon">Process<wbr>Container</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="referencesdecorator.html" class="tsd-kind-icon">References<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="runreferencesdecorator.html" class="tsd-kind-icon">Run<wbr>References<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#_" class="tsd-kind-icon">_</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#process" class="tsd-kind-icon">process</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="refer.runreferencesdecorator.html" class="tsd-kind-icon">Run<wbr>References<wbr>Decorator</a>
 					</li>
 				</ul>
 			</nav>

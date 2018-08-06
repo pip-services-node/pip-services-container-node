@@ -1,3 +1,5 @@
+/** @module core */
+/** @hidden */
 let process = require('process');
 
 import { ConsoleLogger } from 'pip-services-components-node';

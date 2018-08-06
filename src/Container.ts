@@ -1,3 +1,4 @@
+/** @module core */
 import { Descriptor } from 'pip-services-commons-node';
 import { IOpenable } from 'pip-services-commons-node';
 import { IReferences } from 'pip-services-commons-node';
