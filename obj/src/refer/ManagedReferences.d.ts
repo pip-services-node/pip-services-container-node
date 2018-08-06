@@ -1,3 +1,4 @@
+/** @module refer */
 import { IOpenable } from 'pip-services-commons-node';
 import { References } from 'pip-services-commons-node';
 import { ReferencesDecorator } from './ReferencesDecorator';

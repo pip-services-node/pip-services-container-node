@@ -1,3 +1,4 @@
+/** @module config */
 import { Descriptor } from 'pip-services-commons-node';
 import { TypeDescriptor } from 'pip-services-commons-node';
 import { ConfigParams } from 'pip-services-commons-node';

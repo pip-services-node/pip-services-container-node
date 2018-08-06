@@ -1,3 +1,4 @@
+/** @module refer */
 import { IReferences } from 'pip-services-commons-node';
 export declare class ReferencesDecorator implements IReferences {
     constructor(baseReferences: IReferences, parentReferences: IReferences);

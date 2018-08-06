@@ -1,3 +1,4 @@
+/** @module refer */
 export { ContainerReferences } from './ContainerReferences';
 export { ReferencesDecorator } from './ReferencesDecorator';
 export { BuildReferencesDecorator } from './BuildReferencesDecorator';

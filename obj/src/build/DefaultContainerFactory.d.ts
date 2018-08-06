@@ -1,3 +1,4 @@
+/** @module build */
 import { IFactory } from 'pip-services-components-node';
 import { CompositeFactory } from 'pip-services-components-node';
 import { Descriptor } from 'pip-services-commons-node';

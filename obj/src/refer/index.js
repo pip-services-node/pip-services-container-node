@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/** @module refer */
 var ContainerReferences_1 = require("./ContainerReferences");
 exports.ContainerReferences = ContainerReferences_1.ContainerReferences;
 var ReferencesDecorator_1 = require("./ReferencesDecorator");

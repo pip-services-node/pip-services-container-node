@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/** @module config */
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const ComponentConfig_1 = require("./ComponentConfig");
 class ContainerConfig extends Array {
