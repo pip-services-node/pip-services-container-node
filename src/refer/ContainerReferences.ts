@@ -16,6 +16,7 @@ import { ManagedReferences } from './ManagedReferences';
  */
 export class ContainerReferences extends ManagedReferences {
     
+    //TODO: too much?
     /**
      * Adds [[ComponentConfig component configurations]] to this ContainerReferences object. 
      * 

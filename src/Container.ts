@@ -19,6 +19,14 @@ import { ContainerConfig } from './config/ContainerConfig';
 import { ContainerConfigReader } from './config/ContainerConfigReader';
 import { ContainerReferences } from './refer/ContainerReferences';
 
+/**
+ * Inversion of control (IoC) container, which creates objects 
+ * and controls their lifecycle using various configurations. 
+ * 
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html IConfigurable]] (in the PipServices "Commons" package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html IReferenceable]] (in the PipServices "Commons" package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable]] (in the PipServices "Commons" package)
+ */
 export class Container implements IConfigurable, IReferenceable, IUnreferenceable, IOpenable {
     protected _logger: ILogger = new NullLogger();
     protected _factories: DefaultContainerFactory = new DefaultContainerFactory();
@@ -26,24 +34,61 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
     protected _config: ContainerConfig;
     protected _references: ContainerReferences;
 
+    /**
+     * Creates a new Container.
+     * 
+     * @param name          (optional) the name of the container (used as context info).
+     * @param description   (optional) the container's description (used as context info).
+     * 
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" Package)
+     */
     public constructor(name?: string, description?: string) {
         // Override in child classes
         this._info = new ContextInfo(name, description);
     }
 
+    /**
+     * Creates a [[ContainerConfig]] from the passed ConfigParams, which is used to 
+     * configure the components of this container.
+     * 
+     * @param config    the ConfigParams to configure the container with.
+     * 
+     * @see [[ContainerConfig.fromConfig]] 
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" Package)
+     */
     public configure(config: ConfigParams): void {
         this._config = ContainerConfig.fromConfig(config);
     }
 
+    /**
+     * Reads JSON/YAML data from the target file to this container's [[ContainerConfig]].
+     * 
+     * @param correlationId     unique business transaction id to trace calls across components.
+     * @param path              the path to the target file, containing configuration parameters. 
+     *                          Must not be <code>null</code>.
+     * @param parameters        used to parameterize the ConfigReader.
+     * 
+     * @see [[ContainerConfigReader.readFromFile]]
+     */
     public readConfigFromFile(correlationId: string, path: string, parameters: ConfigParams): void {
         this._config = ContainerConfigReader.readFromFile(correlationId, path, parameters);
         this._logger.trace(correlationId, this._config.toString());
     }
 
+    /**
+     * Method that should be overriden in child classes (child containers). Should set component 
+     * references for the child containers' components.
+     * 
+     * @param references    not used.
+     */
 	public setReferences(references: IReferences): void { 
         // Override in child classes
     }
 
+    /**
+     * Method that should be overriden in child classes (child containers). Should unset the child 
+     * containers' component references.
+     */
     public unsetReferences(): void {
         // Override in child classes
     }
@@ -57,10 +102,30 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
         references.put(DefaultContainerFactory.Descriptor, this._factories);
     }
 
+    /**
+     * @returns whether or not any references have been set in this container.
+     */
     public isOpen(): boolean {
         return this._references != null;
     }
 
+    /**
+     * Starts the container by setting references to components (in accordance with the container's configuration), 
+     * [[setReferences setting child containers' references]], and opening all referenced components.
+     * 
+     * If a custom "context-info" Descriptor is present in the set references, it will also be set.
+     * 
+     * @param correlationId 	unique business transaction id to trace calls across components.
+     * @param callback 			(optional) the function to call when the opening process is complete. 
+     *                          It will be called with an error if one is raised. If omitted, errors 
+     *                          will be thrown by this method.
+     * 
+     * @throws an [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.invalidstateexception.html InvalidStateException]]
+     *          if the container has already been opened (references are set).
+     * 
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" Package)
+     */
     public open(correlationId: string, callback?: (err: any) => void): void {
         if (this._references != null) {
             var err = new InvalidStateException(correlationId, "ALREADY_OPENED", "Container was already opened");
@@ -103,7 +168,15 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
             });
         }
     }
-		
+        
+    /**
+     * Stops the container by [[unsetReferences unsetting references for child containers]] and closing (+ dereferencing) 
+     * the container's components. 
+     * 
+	 * @param correlationId 	unique business transaction id to trace calls across components.
+     * @param callback 			(optional) the function to call when the closing process is complete. 
+     *                          It will be called with an error if one is raised.
+     */
     public close(correlationId: string, callback?: (err: any) => void): void {
         // Skip if container wasn't opened
         if (this._references == null) {
@@ -117,7 +190,7 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
             // Unset references for child container
             this.unsetReferences();
 
-            // Close and deference components
+            // Close and dereference components
             this._references.close(correlationId, (err) => {
                 this._references = null;
                 this._logger.info(correlationId, "Container %s stopped", this._info.name);

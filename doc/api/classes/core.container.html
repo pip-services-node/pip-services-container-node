@@ -67,6 +67,25 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Inversion of control (IoC) container, which creates objects
+						and controls their lifecycle using various configurations.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html" class="external">IConfigurable</a> (in the PipServices &quot;Commons&quot; package)</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html" class="external">IReferenceable</a> (in the PipServices &quot;Commons&quot; package)</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html" class="external">IOpenable</a> (in the PipServices &quot;Commons&quot; package)</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -137,16 +156,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L27">Container.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L35">Container.ts:35</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new Container.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html" class="external">ContextInfo</a> (in the PipServices &quot;Components&quot; Package)</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>(optional) the name of the container (used as context info).</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> description: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>(optional) the container&#39;s description (used as context info).</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="core.container.html" class="tsd-signature-type">Container</a></h4>
@@ -162,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">_config<span class="tsd-signature-symbol">:</span> <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L26">Container.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L34">Container.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,7 +211,7 @@
 					<div class="tsd-signature tsd-kind-icon">_factories<span class="tsd-signature-symbol">:</span> <a href="build.defaultcontainerfactory.html" class="tsd-signature-type">DefaultContainerFactory</a><span class="tsd-signature-symbol"> =&nbsp;new DefaultContainerFactory()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L24">Container.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L32">Container.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -182,7 +221,7 @@
 					<div class="tsd-signature tsd-kind-icon">_info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContextInfo</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L25">Container.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L33">Container.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -192,7 +231,7 @@
 					<div class="tsd-signature tsd-kind-icon">_logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ILogger</span><span class="tsd-signature-symbol"> =&nbsp;new NullLogger()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L23">Container.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L31">Container.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -202,7 +241,7 @@
 					<div class="tsd-signature tsd-kind-icon">_references<span class="tsd-signature-symbol">:</span> <a href="refer.containerreferences.html" class="tsd-signature-type">ContainerReferences</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L27">Container.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L35">Container.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -219,16 +258,29 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L107">Container.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L180">Container.ts:180</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stops the container by <a href="core.container.html#unsetreferences">unsetting references for child containers</a> and closing (+ dereferencing)
+									the container&#39;s components.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) the function to call when the closing process is complete.
+										It will be called with an error if one is raised.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
 											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
@@ -263,13 +315,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L34">Container.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L59">Container.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="config.containerconfig.html">ContainerConfig</a> from the passed ConfigParams, which is used to
+									configure the components of this container.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfig.html#fromconfig">ContainerConfig.fromConfig</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; Package)</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>config: <span class="tsd-signature-type">ConfigParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ConfigParams to configure the container with.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -286,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L51">Container.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L96">Container.ts:96</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -309,10 +378,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L60">Container.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L108">Container.ts:108</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>whether or not any references have been set in this container.</p>
 						</li>
 					</ul>
 				</section>
@@ -326,16 +398,43 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L64">Container.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L129">Container.ts:129</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts the container by setting references to components (in accordance with the container&#39;s configuration),
+									<a href="core.container.html#setreferences">setting child containers&#39; references</a>, and opening all referenced components.</p>
+								</div>
+								<p>If a custom &quot;context-info&quot; Descriptor is present in the set references, it will also be set.</p>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>an <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.invalidstateexception.html" class="external">InvalidStateException</a>
+										if the container has already been opened (references are set).</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html" class="external">ContextInfo</a> (in the PipServices &quot;Components&quot; Package)</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html" class="external">Descriptor</a> (in the PipServices &quot;Commons&quot; Package)</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) the function to call when the opening process is complete.
+											It will be called with an error if one is raised. If omitted, errors
+										will be thrown by this method.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
 											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
@@ -370,19 +469,39 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L38">Container.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L73">Container.ts:73</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reads JSON/YAML data from the target file to this container&#39;s <a href="config.containerconfig.html">ContainerConfig</a>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="config.containerconfigreader.html#readfromfile">ContainerConfigReader.readFromFile</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique business transaction id to trace calls across components.</p>
+									</div>
 								</li>
 								<li>
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the path to the target file, containing configuration parameters.
+										Must not be <code>null</code>.</p>
+									</div>
 								</li>
 								<li>
 									<h5>parameters: <span class="tsd-signature-type">ConfigParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>used to parameterize the ConfigReader.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -399,13 +518,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L43">Container.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L84">Container.ts:84</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method that should be overriden in child classes (child containers). Should set component
+									references for the child containers&#39; components.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>references: <span class="tsd-signature-type">IReferences</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>not used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -422,9 +550,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/3750d8c/src/Container.ts#L47">Container.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f07c038/src/Container.ts#L92">Container.ts:92</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method that should be overriden in child classes (child containers). Should unset the child
+									containers&#39; component references.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>

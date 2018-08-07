@@ -22,10 +22,12 @@ export class ManagedReferences extends ReferencesDecorator implements IOpenable 
     protected _linker: LinkReferencesDecorator;
     protected _runner: RunReferencesDecorator;
 
-    //TODO: Too much/too specific?
+    //TODO: Too much?
     /**
      * Creates a new ManagedReferences object using the provided tuples array of 
-     * references. This constructor passed the tuples array to [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]],
+     * references. 
+     * 
+     * This constructor passes the tuples array to [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]],
      * the result of which is passed to [[BuildReferencesDecorator.constructor BuildReferencesDecorator's constructor]] 
      * (the created "References" are passed as baseReferences and this object itself is passed as "parent references"), 
      * the result of which is passed to [[LinkReferencesDecorator.constructor LinkReferencesDecorator's constructor]],
