@@ -30,7 +30,7 @@ export class ContainerConfig extends Array<ComponentConfig> {
      * 
      * @param value     the value to convert.
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html#fromvalue ConfigParams.fromValue]] (in the PipServices "Commons" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html#fromvalue ConfigParams.fromValue]] (in the PipServices "Commons" package)
      * @see [[fromConfig]]
      */
     public static fromValue(value: any): ContainerConfig {
@@ -43,7 +43,7 @@ export class ContainerConfig extends Array<ComponentConfig> {
      * 
      * @param config    the ConfigParams to convert.
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
      * @see [[ComponentConfig.fromConfig]]
      */
     public static fromConfig(config: ConfigParams): ContainerConfig {

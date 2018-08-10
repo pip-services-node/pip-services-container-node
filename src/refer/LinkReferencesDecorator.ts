@@ -13,7 +13,7 @@ import { ReferencesDecorator } from './ReferencesDecorator'
  * <code>open</code> and <code>close</code> methods, respectively.
  * 
  * @see [[ReferencesDecorator]] 
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referencer.html Referencer]] (in the PipServices "Commons" Package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referencer.html Referencer]] (in the PipServices "Commons" package)
  */
 export class LinkReferencesDecorator extends ReferencesDecorator implements IOpenable {
     private _opened: boolean = false;

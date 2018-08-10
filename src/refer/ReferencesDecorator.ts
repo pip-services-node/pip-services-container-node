@@ -5,7 +5,7 @@ import { IReferences } from 'pip-services-commons-node';
  * Implementation of reference decorators, which can be used to add additional references 
  * to existing base/parent references.
  * 
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferences.html IReferences]] (in the PipServices "Commons" Package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferences.html IReferences]] (in the PipServices "Commons" package)
  */
 export class ReferencesDecorator implements IReferences {
 	

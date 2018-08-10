@@ -14,7 +14,7 @@ import { RunReferencesDecorator } from './RunReferencesDecorator';
  * @see [[RunReferencesDecorator]]
  * @see [[LinkReferencesDecorator]]
  * @see [[BuildReferencesDecorator]]
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html References]] (in the PipServices "Commons" Package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html References]] (in the PipServices "Commons" package)
  */
 export class ManagedReferences extends ReferencesDecorator implements IOpenable {
     protected _references: References;
@@ -36,7 +36,7 @@ export class ManagedReferences extends ReferencesDecorator implements IOpenable 
      * 
      * @param tuples    the references to initialize the new object with.
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]] (in the PipServices "Commons" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]] (in the PipServices "Commons" package)
      * @see [[BuildReferencesDecorator.constructor BuildReferencesDecorator's constructor]] 
      * @see [[LinkReferencesDecorator.constructor LinkReferencesDecorator's constructor]]
      * @see [[RunReferencesDecorator.constructor RunReferencesDecorator's constructor]]

@@ -40,7 +40,7 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
      * @param name          (optional) the name of the container (used as context info).
      * @param description   (optional) the container's description (used as context info).
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" package)
      */
     public constructor(name?: string, description?: string) {
         // Override in child classes
@@ -54,7 +54,7 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
      * @param config    the ConfigParams to configure the container with.
      * 
      * @see [[ContainerConfig.fromConfig]] 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
      */
     public configure(config: ConfigParams): void {
         this._config = ContainerConfig.fromConfig(config);
@@ -123,8 +123,8 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
      * @throws an [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.invalidstateexception.html InvalidStateException]]
      *          if the container has already been opened (references are set).
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" Package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" package)
      */
     public open(correlationId: string, callback?: (err: any) => void): void {
         if (this._references != null) {

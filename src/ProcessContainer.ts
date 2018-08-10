@@ -32,7 +32,7 @@ export class ProcessContainer extends Container {
      *                      correlation id).
      * @param description   (optional) the container's description (used as context info).
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" package)
      */
     public constructor(name?: string, description?: string) {
         super(name, description);

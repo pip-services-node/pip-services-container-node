@@ -10,8 +10,8 @@ import { ContainerConfig } from './ContainerConfig';
  * Helper class that contains static methods for reading [[ContainerConfig container configurations]] from 
  * JSON and YAML files.
  * 
- * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html JsonConfigReader]] (in the PipServices "Components" Package)
- * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html YamlConfigReader]] (in the PipServices "Components" Package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html JsonConfigReader]] (in the PipServices "Components" package)
+ * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html YamlConfigReader]] (in the PipServices "Components" package)
  */
 export class ContainerConfigReader {
 
@@ -55,8 +55,8 @@ export class ContainerConfigReader {
      * @param path              the path to the target file, containing configuration parameters in JSON format.  
      * @param parameters        used to parameterize the JsonConfigReader.
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" Package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html#readconfig JsonConfigReader.readConfig]] (in the PipServices "Components" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html#readconfig JsonConfigReader.readConfig]] (in the PipServices "Components" package)
      * @see [[ContainerConfig.fromConfig]]
      */
     public static readFromJsonFile(correlationId: string, path: string, parameters: ConfigParams): ContainerConfig {
@@ -72,8 +72,8 @@ export class ContainerConfigReader {
      * @param path              the path to the target file, containing configuration parameters in YAML format. 
      * @param parameters        used to parameterize the YamlConfigReader.
      * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" Package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html#readconfig YamlConfigReader.readConfig]] (in the PipServices "Components" Package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
+     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html#readconfig YamlConfigReader.readConfig]] (in the PipServices "Components" package)
      * @see [[ContainerConfig.fromConfig]]
      */
     public static readFromYamlFile(correlationId: string, path: string, parameters: ConfigParams): ContainerConfig {
