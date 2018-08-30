@@ -12,6 +12,17 @@ import { ContainerConfig } from './ContainerConfig';
  * 
  * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.jsonconfigreader.html JsonConfigReader]] (in the PipServices "Components" package)
  * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html YamlConfigReader]] (in the PipServices "Components" package)
+ * 
+ * ### Examples ###
+ * 
+ * public MyMethod(parameters: ConfigParams, path: string) {
+ *      let containerConfig1 = ContainerConfigReader.readFromFile(null, path, parameters);
+ *      ...
+ *      let containerConfig2 = ContainerConfigReader.readFromJsonFile(null, path, parameters);
+ *      ...
+ *      let containerConfig3 = ContainerConfigReader.readFromYamlFile(null, path, parameters);
+ *      ...
+ * }
  */
 export class ContainerConfigReader {
 

@@ -10,6 +10,14 @@ import { ConfigException } from 'pip-services-commons-node';
  * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" package)
  * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html TypeDescriptor]] (in the PipServices "Commons" package)
  * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
+ * 
+ * ### Examples ###
+ * 
+ * public MyMethod(config: ConfigParams) {
+ *      let componentConfig = ComponentConfig.fromConfig(config);
+ *      ...
+ * }
+ * 
  */
 export class ComponentConfig {
 

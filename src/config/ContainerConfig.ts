@@ -8,6 +8,15 @@ import { ComponentConfig } from './ComponentConfig';
  * which can be used to configure the components that are running inside a given container.
  * 
  * @see [[ComponentConfig]]
+ * 
+ * ### EXamples ###
+ * 
+ * public MyMethod(config: ConfigParams, value: any) {
+ *      let containerConfig1 = ContainerConfig.fromValue(value);
+ *      ...
+ *      let containerConfig2 = ContainerConfig.fromConfig(config);
+ *      ...
+ * }
  */
 export class ContainerConfig extends Array<ComponentConfig> {
 

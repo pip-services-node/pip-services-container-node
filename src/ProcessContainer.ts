@@ -21,6 +21,16 @@ import { Container } from './Container';
  * - <code>--param / --params / -p</code> - defines how the [[ContainerConfigReader configuration reader]] 
  * is to be parameterizing.
  * - <code>--help / -h</code> - prints the ProcessContainer's help.
+ * 
+ * ### Example ###
+ * 
+ * export class MyDataProcess extends ProcessContainer {
+ *      public constructor() {
+ *          super("MyData", "Description MyData");
+ *      }
+ *      
+ *      ...
+ * }
  */
 export class ProcessContainer extends Container {
     protected _configPath: string = './config/config.yml';
