@@ -11,12 +11,12 @@ import { ComponentConfig } from './ComponentConfig';
  * 
  * ### EXamples ###
  * 
- * public MyMethod(config: ConfigParams, value: any) {
- *      let containerConfig1 = ContainerConfig.fromValue(value);
- *      ...
- *      let containerConfig2 = ContainerConfig.fromConfig(config);
- *      ...
- * }
+ *     public MyMethod(config: ConfigParams, value: any) {
+ *         let containerConfig1 = ContainerConfig.fromValue(value);
+ *         ...
+ *         let containerConfig2 = ContainerConfig.fromConfig(config);
+ *         ...
+ *     }
  */
 export class ContainerConfig extends Array<ComponentConfig> {
 

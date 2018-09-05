@@ -13,10 +13,10 @@ import { ConfigException } from 'pip-services-commons-node';
  * 
  * ### Examples ###
  * 
- * public MyMethod(config: ConfigParams) {
- *      let componentConfig = ComponentConfig.fromConfig(config);
- *      ...
- * }
+ *     public MyMethod(config: ConfigParams) {
+ *         let componentConfig = ComponentConfig.fromConfig(config);
+ *         ...
+ *     }
  * 
  */
 export class ComponentConfig {

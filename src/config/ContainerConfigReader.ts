@@ -15,14 +15,16 @@ import { ContainerConfig } from './ContainerConfig';
  * 
  * ### Examples ###
  * 
- * public MyMethod(parameters: ConfigParams, path: string) {
- *      let containerConfig1 = ContainerConfigReader.readFromFile(null, path, parameters);
- *      ...
- *      let containerConfig2 = ContainerConfigReader.readFromJsonFile(null, path, parameters);
- *      ...
- *      let containerConfig3 = ContainerConfigReader.readFromYamlFile(null, path, parameters);
- *      ...
- * }
+ *     public MyMethod(parameters: ConfigParams, path: string) {
+ *         let containerConfig1 = ContainerConfigReader.readFromFile(null, path, parameters);
+ *         ...
+ *         let containerConfig2 = ContainerConfigReader.readFromJsonFile(null, path, 
+ *             parameters);
+ *         ...
+ *         let containerConfig3 = ContainerConfigReader.readFromYamlFile(null, path, 
+ *             parameters);
+ *         ...
+ *     }
  */
 export class ContainerConfigReader {
 

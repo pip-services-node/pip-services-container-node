@@ -79,7 +79,18 @@
 						</dd>
 						<dt>see</dt>
 						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/config.yamlconfigreader.html" class="external">YamlConfigReader</a> (in the PipServices &quot;Components&quot; package)</p>
-						</dd>
+							<h3 id="examples">Examples</h3>
+							<pre><code><span class="hljs-keyword">public</span> MyMethod(parameters: ConfigParams, path: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">let</span> containerConfig1 = ContainerConfigReader.readFromFile(<span class="hljs-built_in">null</span>, path, parameters);
+    <span class="hljs-params">...</span>
+    <span class="hljs-keyword">let</span> containerConfig2 = ContainerConfigReader.readFromJsonFile(<span class="hljs-built_in">null</span>, path,
+        parameters);
+    <span class="hljs-params">...</span>
+    <span class="hljs-keyword">let</span> containerConfig3 = ContainerConfigReader.readFromYamlFile(<span class="hljs-built_in">null</span>, path,
+        parameters);
+    <span class="hljs-params">...</span>
+}
+</code></pre></dd>
 					</dl>
 				</div>
 			</section>
@@ -118,7 +129,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/2fd3f7c/src/config/ContainerConfigReader.ts#L34">config/ContainerConfigReader.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfigReader.ts#L47">config/ContainerConfigReader.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +187,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/2fd3f7c/src/config/ContainerConfigReader.ts#L62">config/ContainerConfigReader.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfigReader.ts#L75">config/ContainerConfigReader.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,7 +242,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/2fd3f7c/src/config/ContainerConfigReader.ts#L79">config/ContainerConfigReader.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfigReader.ts#L92">config/ContainerConfigReader.ts:92</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

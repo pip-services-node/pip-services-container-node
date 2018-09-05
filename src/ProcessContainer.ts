@@ -24,13 +24,12 @@ import { Container } from './Container';
  * 
  * ### Example ###
  * 
- * export class MyDataProcess extends ProcessContainer {
- *      public constructor() {
- *          super("MyData", "Description MyData");
+ *      export class MyDataProcess extends ProcessContainer {
+ *          public constructor() {
+ *              super("MyData", "Description MyData");
+ *          } 
+ *          ...
  *      }
- *      
- *      ...
- * }
  */
 export class ProcessContainer extends Container {
     protected _configPath: string = './config/config.yml';
