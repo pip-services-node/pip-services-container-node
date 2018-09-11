@@ -8,7 +8,7 @@ import { InvalidStateException } from 'pip-services-commons-node';
 import { ConfigParams } from 'pip-services-commons-node';
 import { IConfigurable } from 'pip-services-commons-node';
 
-import { ILogger } from 'pip-services-components-node';
+import { ILogger, IFactory } from 'pip-services-components-node';
 import { NullLogger } from 'pip-services-components-node';
 import { CompositeLogger } from 'pip-services-components-node';
 import { ContextInfo } from 'pip-services-components-node';
@@ -100,6 +100,16 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
         else this._info = existingInfo;
         
         references.put(DefaultContainerFactory.Descriptor, this._factories);
+    }
+
+    /**
+     * Adds a factory to the container. The factory is used to create components
+     * added to the container by their locators (descriptors).
+     * 
+     * @param factory a component factory to be added.
+     */
+    public addFactory(factory: IFactory): void {
+        this._factories.add(factory);
     }
 
     /**
