@@ -48,6 +48,6 @@
         "mocha": "*",
         "chai": "*",
         "typedoc": "^0.11.1",
-        "typedoc-plugin-external-module-name": "^1.1.3"
+        "typedoc-plugin-external-module-name": "git+https://github.com/hobbyguy77/typedoc-plugin-external-module-name.git"
     }
 }
