@@ -167,7 +167,7 @@
 								</div>
 								<p>This constructor passes the tuples array to <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor" class="external">References&#39; constructor</a>,
 									the result of which is passed to <a href="refer.buildreferencesdecorator.html#constructor">BuildReferencesDecorator&#39;s constructor</a>
-									(the created &quot;References&quot; are passed as baseReferences and this object itself is passed as &quot;parent references&quot;),
+									(the created &quot;References&quot; are passed as nextReferences and this object itself is passed as &quot;parent references&quot;),
 									the result of which is passed to <a href="refer.linkreferencesdecorator.html#constructor">LinkReferencesDecorator&#39;s constructor</a>,
 									the result of which is passed to <a href="refer.runreferencesdecorator.html#constructor">RunReferencesDecorator&#39;s constructor</a>,
 								the result of which is set as this object&#39;s base references.</p>
@@ -253,7 +253,7 @@
 					<h3>base<wbr>References</h3>
 					<div class="tsd-signature tsd-kind-icon">base<wbr>References<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IReferences</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#basereferences">baseReferences</a></p>
+						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#basereferences">nextReferences</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/refer/ReferencesDecorator.ts#L24">refer/ReferencesDecorator.ts:24</a></li>
 						</ul>
@@ -264,7 +264,7 @@
 					<h3>parent<wbr>References</h3>
 					<div class="tsd-signature tsd-kind-icon">parent<wbr>References<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IReferences</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#parentreferences">parentReferences</a></p>
+						<p>Inherited from <a href="refer.referencesdecorator.html">ReferencesDecorator</a>.<a href="refer.referencesdecorator.html#parentreferences">topReferences</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/refer/ReferencesDecorator.ts#L25">refer/ReferencesDecorator.ts:25</a></li>
 						</ul>
@@ -297,7 +297,7 @@
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>unique business transaction id to trace calls across components.</p>
+										<p>(optional) transaction id to trace execution through call chain.</p>
 									</div>
 								</li>
 								<li>
@@ -629,7 +629,7 @@
 								<li>
 									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>unique business transaction id to trace calls across components.</p>
+										<p>(optional) transaction id to trace execution through call chain.</p>
 									</div>
 								</li>
 								<li>

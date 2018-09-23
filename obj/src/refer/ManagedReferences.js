@@ -6,8 +6,12 @@ const BuildReferencesDecorator_1 = require("./BuildReferencesDecorator");
 const LinkReferencesDecorator_1 = require("./LinkReferencesDecorator");
 const RunReferencesDecorator_1 = require("./RunReferencesDecorator");
 /**
- * Manages [[RunReferencesDecorator run]], [[LinkReferencesDecorator link]],
- * [[BuildReferencesDecorator build]], and [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html other references]].
+ * Managed references that in addition to keeping and locating references can also
+ * manage their lifecycle:
+ * - Auto-creation of missing component using available factories
+ * - Auto-linking newly added components
+ * - Auto-opening newly added components
+ * - Auto-closing removed components
  *
  * @see [[RunReferencesDecorator]]
  * @see [[LinkReferencesDecorator]]
@@ -15,25 +19,10 @@ const RunReferencesDecorator_1 = require("./RunReferencesDecorator");
  * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html References]] (in the PipServices "Commons" package)
  */
 class ManagedReferences extends ReferencesDecorator_1.ReferencesDecorator {
-    //TODO: Too much?
     /**
-     * Creates a new ManagedReferences object using the provided tuples array of
-     * references.
+     * Creates a new instance of the references
      *
-     * This constructor passes the tuples array to [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]],
-     * the result of which is passed to [[BuildReferencesDecorator.constructor BuildReferencesDecorator's constructor]]
-     * (the created "References" are passed as baseReferences and this object itself is passed as "parent references"),
-     * the result of which is passed to [[LinkReferencesDecorator.constructor LinkReferencesDecorator's constructor]],
-     * the result of which is passed to [[RunReferencesDecorator.constructor RunReferencesDecorator's constructor]],
-     * the result of which is set as this object's base references.
-     *
-     * @param tuples    the references to initialize the new object with.
-     *
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.references.html#constructor References' constructor]] (in the PipServices "Commons" package)
-     * @see [[BuildReferencesDecorator.constructor BuildReferencesDecorator's constructor]]
-     * @see [[LinkReferencesDecorator.constructor LinkReferencesDecorator's constructor]]
-     * @see [[RunReferencesDecorator.constructor RunReferencesDecorator's constructor]]
-     *
+     * @param tuples    tuples where odd values are component locators (descriptors) and even values are component references
      */
     constructor(tuples = null) {
         super(null, null);
@@ -41,22 +30,21 @@ class ManagedReferences extends ReferencesDecorator_1.ReferencesDecorator {
         this._builder = new BuildReferencesDecorator_1.BuildReferencesDecorator(this._references, this);
         this._linker = new LinkReferencesDecorator_1.LinkReferencesDecorator(this._builder, this);
         this._runner = new RunReferencesDecorator_1.RunReferencesDecorator(this._linker, this);
-        this.baseReferences = this._runner;
+        this.nextReferences = this._runner;
     }
     /**
-     * @returns whether or not all link references were set and all run references
-     *          were successfully opened.
+     * Checks if the component is opened.
+     *
+     * @returns true if the component has been opened and false otherwise.
      */
     isOpen() {
         return this._linker.isOpen() && this._runner.isOpen();
     }
     /**
-     * Sets all links references and, if they are successfully set, opens all run references.
+     * Opens the component.
      *
-     * @param correlationId 	unique business transaction id to trace calls across components.
-     * @param callback 			(optional) the function to call when the opening process is complete.
-     *                          It will be called with an error if one is raised.
-     *
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     open(correlationId, callback) {
         this._linker.open(correlationId, (err) => {
@@ -67,12 +55,10 @@ class ManagedReferences extends ReferencesDecorator_1.ReferencesDecorator {
         });
     }
     /**
-     * Closes all run references and, if they are successfully closed, unsets all links references.
+     * Closes component and frees used resources.
      *
-     * @param correlationId 	unique business transaction id to trace calls across components.
-     * @param callback 			(optional) the function to call when the closing process is complete.
-     *                          It will be called with an error if one is raised.
-     *
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     close(correlationId, callback) {
         this._runner.close(correlationId, (err) => {
@@ -83,12 +69,11 @@ class ManagedReferences extends ReferencesDecorator_1.ReferencesDecorator {
         });
     }
     /**
-     * Static method for generating a ManagedReferences object using the provided
-     * tuples arrays.
+     * Creates a new ManagedReferences object filled with provided key-value pairs called tuples.
+     * Tuples parameters contain a sequence of locator1, component1, locator2, component2, ... pairs.
      *
-     * @param tuples    the tuples arrays to initialize the new object with.
-     *
-     * @see [[constructor]]
+     * @param tuples	the tuples to fill a new ManagedReferences object.
+     * @returns			a new ManagedReferences object.
      */
     static fromTuples(...tuples) {
         return new ManagedReferences(tuples);

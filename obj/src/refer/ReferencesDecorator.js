@@ -1,75 +1,74 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Implementation of reference decorators, which can be used to add additional references
- * to existing base/parent references.
+ * Chainable decorator for IReferences that allows to inject additional capabilities
+ * such as automatic component creation, automatic registration and opening.
  *
  * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferences.html IReferences]] (in the PipServices "Commons" package)
  */
 class ReferencesDecorator {
-    //TODO: base AND/OR parent?
     /**
-     * Creates a new ReferencesDecorator object using the given base and/or parent references.
+     * Creates a new instance of the decorator.
      *
-     * @param baseReferences 		the base references that this object will be decorating.
-     * @param parentReferences 		the parent references that this object will be decorating.
+     * @param nextReferences 		the next references or decorator in the chain.
+     * @param topReferences 		the decorator at the top of the chain.
      */
-    constructor(baseReferences, parentReferences) {
-        this.baseReferences = baseReferences != null ? baseReferences : parentReferences;
-        this.parentReferences = parentReferences != null ? parentReferences : baseReferences;
+    constructor(nextReferences, topReferences) {
+        this.nextReferences = nextReferences != null ? nextReferences : topReferences;
+        this.topReferences = topReferences != null ? topReferences : nextReferences;
     }
     /**
-     * Puts a new component reference into the base set of references.
+     * Puts a new reference into this reference map.
      *
-     * @param locator 	the locator to find the reference by.
-     * @param component the component reference that is to be added.
+     * @param locator 	a locator to find the reference by.
+     * @param component a component reference to be added.
      */
     put(locator, component) {
-        this.baseReferences.put(locator, component);
+        this.nextReferences.put(locator, component);
     }
     /**
-     * Removes a component reference from the base set of references.
+     * Removes a previously added reference that matches specified locator.
+     * If many references match the locator, it removes only the first one.
+     * When all references shall be removed, use [[removeAll]] method instead.
      *
-     * @param locator 	the locator of the reference that is to be removed.
-     * @returns the removed reference.
+     * @param locator 	a locator to remove reference
+     * @returns the removed component reference.
      *
      * @see [[removeAll]]
      */
     remove(locator) {
-        return this.baseReferences.remove(locator);
+        return this.nextReferences.remove(locator);
     }
     /**
-     * Removes all component references with the given locator from the base
-     * set of references.
+     * Removes all component references that match the specified locator.
      *
      * @param locator 	the locator to remove references by.
      * @returns a list, containing all removed references.
      */
     removeAll(locator) {
-        return this.baseReferences.removeAll(locator);
+        return this.nextReferences.removeAll(locator);
     }
     /**
-     * Gets all stored component locators.
+     * Gets locators for all registered component references in this reference map.
      *
-     * @returns a list, containing the locators for all of the stored component references.
+     * @returns a list with component locators.
      */
     getAllLocators() {
-        return this.baseReferences.getAllLocators();
+        return this.nextReferences.getAllLocators();
     }
     /**
-     * Gets all stored component references.
+     * Gets all component references registered in this reference map.
      *
-     * @returns a list, containing all stored component references.
+     * @returns a list with component references.
      */
     getAll() {
-        return this.baseReferences.getAll();
+        return this.nextReferences.getAll();
     }
     /**
-     * Gets a component references that matches the provided locator and the specified type. The search
-     * is performed, starting from the last-added references.
+     * Gets an optional component reference that matches specified locator.
      *
-     * @param locator 	the locator to find a reference by.
-     * @returns the first found component reference or <code>null</code> (if none were found).
+     * @param locator 	the locator to find references by.
+     * @returns a matching component reference or null if nothing was found.
      */
     getOneOptional(locator) {
         try {
@@ -81,23 +80,21 @@ class ReferencesDecorator {
         }
     }
     /**
-     * Gets a component reference that matches the provided locator and the specified type.
-     * The search is performed, starting from the last-added references.
-     *
-     * If no references are found, an exception will be thrown.
+     * Gets a required component reference that matches specified locator.
      *
      * @param locator 	the locator to find a reference by.
-     * @returns the first found component reference.
+     * @returns a matching component reference.
+     * @throws a [[ReferenceException]] when no references found.
      */
     getOneRequired(locator) {
         let components = this.find(locator, true);
         return components.length > 0 ? components[0] : null;
     }
     /**
-     * Gets a list of component references that match the provided locator and the specified type.
+     * Gets all component references that match specified locator.
      *
      * @param locator 	the locator to find references by.
-     * @returns a list, containing all component references found.
+     * @returns a list with matching component references or empty list if nothing was found.
      */
     getOptional(locator) {
         try {
@@ -108,24 +105,29 @@ class ReferencesDecorator {
         }
     }
     /**
-     * Gets a list of component references that match the provided locator and the specified type.
-     * If no references are found, an exception will be thrown.
+     * Gets all component references that match specified locator.
+     * At least one component reference must be present.
+     * If it doesn't the method throws an error.
      *
      * @param locator 	the locator to find references by.
-     * @returns a list, containing all component references found.
+     * @returns a list with matching component references.
+     *
+     * @throws a [[ReferenceException]] when no references found.
      */
     getRequired(locator) {
         return this.find(locator, true);
     }
     /**
-     * Finds all references that match the specified query criteria and the specified type.
+     * Gets all component references that match specified locator.
      *
      * @param locator 	the locator to find a reference by.
      * @param required 	forces to raise an exception if no reference is found.
-     * @returns a list of found references.
+     * @returns a list with matching component references.
+     *
+     * @throws a [[ReferenceException]] when required is set to true but no references found.
      */
     find(locator, required) {
-        return this.baseReferences.find(locator, required);
+        return this.nextReferences.find(locator, required);
     }
 }
 exports.ReferencesDecorator = ReferencesDecorator;

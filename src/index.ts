@@ -1,6 +1,9 @@
 /** 
  * @module core 
  * @preferred
+ * 
+ * Todo: Rewrite the description.
+ * 
  * Contains implementation of the inversion of control container, which creates objects 
  * and controls their lifecycle(*) using various configurations. 
  * 

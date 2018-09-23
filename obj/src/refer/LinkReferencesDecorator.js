@@ -2,56 +2,50 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const ReferencesDecorator_1 = require("./ReferencesDecorator");
-//TODO: not 100% sure how Referencer "links" components. Research and add to the comment.
 /**
- * Combines the functionality of the [[ReferencesDecorator]]
- * and [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referencer.html Referencer]]
- * classes by setting and unsetting link references (link stage) on calls to the
- * <code>open</code> and <code>close</code> methods, respectively.
- *
- * @see [[ReferencesDecorator]]
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.referencer.html Referencer]] (in the PipServices "Commons" package)
+ * References decorator that automatically sets references to newly added components
+ * that implement IReferenceable interface and unsets references from removed components
+ * that implement IUnreferenceable interface.
  */
 class LinkReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator {
     /**
-     * Creates a new LinkReferencesDecorator object, which will decorate the
-     * given base and/or parent references.
+     * Creates a new instance of the decorator.
      *
-     * @param baseReferences 		the base references that this object will be decorating.
-     * @param parentReferences 		the parent references that this object will be decorating.
+     * @param nextReferences 		the next references or decorator in the chain.
+     * @param topReferences 		the decorator at the top of the chain.
      */
-    constructor(baseReferences, parentReferences) {
-        super(baseReferences, parentReferences);
+    constructor(nextReferences, topReferences) {
+        super(nextReferences, topReferences);
         this._opened = false;
     }
     /**
-     * @returns whether or not references to all components have been set.
+     * Checks if the component is opened.
+     *
+     * @returns true if the component has been opened and false otherwise.
      */
     isOpen() {
         return this._opened;
     }
     /**
-     * Sets references to all referenced components.
+     * Opens the component.
      *
-     * @param correlationId 	not used.
-     * @param callback 			(optional) will be called with <code>null</code> when the
-     *                          opening process is complete.
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     open(correlationId, callback) {
         if (!this._opened) {
             this._opened = true;
             let components = this.getAll();
-            pip_services_commons_node_1.Referencer.setReferences(this.parentReferences, components);
+            pip_services_commons_node_1.Referencer.setReferences(this.topReferences, components);
         }
         if (callback)
             callback(null);
     }
     /**
-     * Unsets references to all referenced components.
+     * Closes component and frees used resources.
      *
-     * @param correlationId 	not used.
-     * @param callback 			(optional) will be called with <code>null</code> when the
-     *                          closing process is complete.
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     close(correlationId, callback) {
         if (this._opened) {
@@ -63,23 +57,23 @@ class LinkReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator 
             callback(null);
     }
     /**
-     * Puts a new component reference into the base set of references. If this object
-     * has already been opened, the added component's reference will be set.
+     * Puts a new reference into this reference map.
      *
-     * @param locator 	the locator to find the component reference by.
-     * @param component the component that is to be added.
+     * @param locator 	a locator to find the reference by.
+     * @param component a component reference to be added.
      */
     put(locator, component) {
         super.put(locator, component);
         if (this._opened)
-            pip_services_commons_node_1.Referencer.setReferencesForOne(this.parentReferences, component);
+            pip_services_commons_node_1.Referencer.setReferencesForOne(this.topReferences, component);
     }
     /**
-     * Removes a component reference from the base set of references. If this object
-     * has already been opened, the removed component's reference will be unset.
+     * Removes a previously added reference that matches specified locator.
+     * If many references match the locator, it removes only the first one.
+     * When all references shall be removed, use [[removeAll]] method instead.
      *
-     * @param locator 	the locator of the component that is to be removed.
-     * @returns the removed component.
+     * @param locator 	a locator to remove reference
+     * @returns the removed component reference.
      *
      * @see [[removeAll]]
      */
@@ -90,12 +84,10 @@ class LinkReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator 
         return component;
     }
     /**
-     * Removes all component references with the given locator from the base
-     * set of references. If this object has already been opened, the removed
-     * components' references will be unset.
+     * Removes all component references that match the specified locator.
      *
-     * @param locator 	the locator to remove components by.
-     * @returns a list, containing all removed components.
+     * @param locator 	the locator to remove references by.
+     * @returns a list, containing all removed references.
      */
     removeAll(locator) {
         let components = super.removeAll(locator);

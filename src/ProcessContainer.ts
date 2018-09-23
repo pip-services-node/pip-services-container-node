@@ -8,40 +8,32 @@ import { ConfigParams } from 'pip-services-commons-node';
 import { Container } from './Container';
 
 /**
- * Represents a system process. 
+ * Inversion of control (IoC) container that runs as a system process.
+ * It processes command line arguments and handles unhandled exceptions and Ctrl-C signal
+ * to gracefully shutdown the container.
  * 
- * A ProcessContainer receives its configuration file via the command line, creates the container, 
- * starts it, reads its configuration, recreates objects, runs them, and then, after ctrl-c is 
- * pressed, turns off and destroys the objects.  
+ * ### Command line arguments ###
+ * - <code>--config / -c</code>             path to JSON or YAML file with container configuration (default: "./config/config.yml")
+ * - <code>--param / --params / -p</code>   value(s) to parameterize the container configuration
+ * - <code>--help / -h</code>               prints the container usage help
  * 
- * All ProcessContainer logs are written to the console.
- * 
- * ProcessContainer run arguments:
- * - <code>--config / -c</code> - defines the path to the container's target JSON/YAML configuration file.
- * - <code>--param / --params / -p</code> - defines how the [[ContainerConfigReader configuration reader]] 
- * is to be parameterizing.
- * - <code>--help / -h</code> - prints the ProcessContainer's help.
+ * @see [[Container]]
  * 
  * ### Example ###
  * 
- *      export class MyDataProcess extends ProcessContainer {
- *          public constructor() {
- *              super("MyData", "Description MyData");
- *          } 
- *          ...
- *      }
+ * let container = new ProcessContainer();
+ * container.addFactory(new MyComponentFactory());
+ * 
+ * container.run(process.args);
  */
 export class ProcessContainer extends Container {
     protected _configPath: string = './config/config.yml';
 
     /**
-     * Creates a new ProcessContainer.
+     * Creates a new instance of the container.
      * 
-     * @param name          (optional) the name of the container (used as context info and as the 
-     *                      correlation id).
-     * @param description   (optional) the container's description (used as context info).
-     * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-components-node/master/doc/api/classes/info.contextinfo.html ContextInfo]] (in the PipServices "Components" package)
+     * @param name          (optional) a container name (accessible via ContextInfo)
+     * @param description   (optional) a container description (accessible via ContextInfo)
      */
     public constructor(name?: string, description?: string) {
         super(name, description);
@@ -124,14 +116,12 @@ export class ProcessContainer extends Container {
     }
 
     /**
-     * Runs this ProcessContainer by:
-     * - retrieving the path to the configuration file and the reader's parameters in 
-     * accordance with the given arguments; 
-     * - [[readConfigFromFile reading]] the configuration file using the retrieved path 
-     * and parameters;
-     * - calling this container's [[open]] method.
+     * Runs the container by instantiating and running components inside the container.
      * 
-     * @param args  the arguments to run the container with.
+     * It reads the container configuration, creates, configures, references and opens components.
+     * On process exit it closes, unreferences and destroys components to gracefully shutdown. 
+     * 
+     * @param args  command line arguments
      */
     public run(args: string[]): void {
         if (this.showHelp(args)) {

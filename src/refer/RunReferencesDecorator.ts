@@ -7,38 +7,37 @@ import { IOpenable } from 'pip-services-commons-node';
 import { ReferencesDecorator } from './ReferencesDecorator';
 
 /**
- * Decorates run references (run stage) as a [[ReferencesDecorator]] and, in addition, opens 
- * and closes the components that are referenced.
+ * References decorator that automatically opens to newly added components
+ * that implement IOpenable interface and closes removed components
+ * that implement IClosable interface.
  */
 export class RunReferencesDecorator extends ReferencesDecorator implements IOpenable {
     public _opened: boolean = false;
 
     /**
-     * Creates a new RunReferencesDecorator object, which will decorate the 
-     * given base and/or parent references.
-     * 
-     * @param baseReferences 		the base references that this object will be decorating.
-	 * @param parentReferences 		the parent references that this object will be decorating.
+	 * Creates a new instance of the decorator.
+	 * 
+	 * @param nextReferences 		the next references or decorator in the chain.
+	 * @param topReferences 		the decorator at the top of the chain.
 	 */
-    public constructor(baseReferences: IReferences, parentReferences: IReferences) {
-    	super(baseReferences, parentReferences);
+    public constructor(nextReferences: IReferences, topReferences: IReferences) {
+    	super(nextReferences, topReferences);
     }
 
     /**
-     * @returns whether or not all referenced components have been opened.
+	 * Checks if the component is opened.
+	 * 
+	 * @returns true if the component has been opened and false otherwise.
      */
     public isOpen(): boolean {
         return this._opened;
     }
 
     /**
-     * Opens all referenced components. If a component fails to be opened, this object will not be 
-     * considered open.
-     * 
-	 * @param correlationId 	unique business transaction id to trace calls across components.
-     * @param callback 			(optional) the function to call when the opening process is complete. 
-     *                          It will be called with an error if one is raised.
+	 * Opens the component.
 	 * 
+	 * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     public open(correlationId: string, callback?: (err: any) => void): void {
         if (!this._opened) {
@@ -54,12 +53,10 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-     * Closes all referenced components. If a component fails to be closed, this object will not be 
-     * considered closed.
-     * 
-	 * @param correlationId 	unique business transaction id to trace calls across components.
-     * @param callback 			(optional) the function to call when the closing process is complete. 
-     *                          It will be called with an error if one is raised.
+	 * Closes component and frees used resources.
+	 * 
+	 * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * @param callback 			callback function that receives error or null no errors occured.
      */
     public close(correlationId: string, callback?: (err: any) => void): void {
         if (this._opened) {
@@ -74,11 +71,10 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Puts a new component reference into the base set of references. If this object
-     * has already been opened, the added component will be opened.
+	 * Puts a new reference into this reference map.
 	 * 
-	 * @param locator 	the locator to find the component reference by.
-	 * @param component the component that is to be added.
+	 * @param locator 	a locator to find the reference by.
+	 * @param component a component reference to be added.
 	 */
     public put(locator: any, component: any): void {
         super.put(locator, component);
@@ -88,11 +84,12 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Removes a component reference from the base set of references. If this object
-     * has already been opened, the removed component will be closed.
+	 * Removes a previously added reference that matches specified locator.
+	 * If many references match the locator, it removes only the first one.
+	 * When all references shall be removed, use [[removeAll]] method instead.
 	 * 
-	 * @param locator 	the locator of the component that is to be removed.
-	 * @returns the removed component.
+	 * @param locator 	a locator to remove reference
+	 * @returns the removed component reference.
 	 * 
 	 * @see [[removeAll]]
 	 */
@@ -106,12 +103,10 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Removes all component references with the given locator from the base 
-	 * set of references. If this object has already been opened, the removed 
-     * components will be closed.
+	 * Removes all component references that match the specified locator. 
 	 * 
-	 * @param locator 	the locator to remove components by.
-	 * @returns a list, containing all removed components.
+	 * @param locator 	the locator to remove references by.
+	 * @returns a list, containing all removed references.
 	 */
     public removeAll(locator: any): any[] {
         let components = super.removeAll(locator);

@@ -5,33 +5,19 @@ import { ConfigParams } from 'pip-services-commons-node';
 import { ConfigException } from 'pip-services-commons-node';
 
 /**
- * Stores configuration parameters for components of a given description or type.
+ * Configuration of a component inside a container.
  * 
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" package)
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html TypeDescriptor]] (in the PipServices "Commons" package)
- * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
- * 
- * ### Examples ###
- * 
- *     public MyMethod(config: ConfigParams) {
- *         let componentConfig = ComponentConfig.fromConfig(config);
- *         ...
- *     }
- * 
+ * The configuration includes type information or descriptor,
+ * and component configuration parameters.
  */
 export class ComponentConfig {
 
     /**
-     * Creates a new ComponentConfig object. Can be configured with a Descriptor 
-     * or TypeDescriptor and a set of ConfigParams (if a pair of them are given).
+     * Creates a new instance of the component configuration.
      * 
-     * @param descriptor    (optional) the component's Descriptor.
-     * @param type          (optional) the component's TypeDescriptor.
-     * @param config        (optional) the ConfigParams to store.
-     * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html Descriptor]] (in the PipServices "Commons" package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html TypeDescriptor]] (in the PipServices "Commons" package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html ConfigParams]] (in the PipServices "Commons" package)
+     * @param descriptor    (optional) a components descriptor (locator).
+     * @param type          (optional) a components type descriptor.
+     * @param config        (optional) component configuration parameters.
      */
     public constructor(descriptor?: Descriptor, type?: TypeDescriptor, config?: ConfigParams) {
         this.descriptor = descriptor;
@@ -44,20 +30,13 @@ export class ComponentConfig {
 	public config: ConfigParams = null;
 
     /**
-     * Static method that converts ConfigParams into a ContainerConfig object. The ConfigParams 
-     * that are passed need to contain a "descriptor" or "type", by which the ContainerConfig 
-     * can be identified.
+     * Creates a new instance of ComponentConfig based on
+     * section from container configuration.
      * 
-     * @param config    the ConfigParams to convert. Must contain a "descriptor" or "type".
-     * @returns the generated ComponentConfig object.
+     * @param config    component parameters from container configuration
+     * @returns a newly created ComponentConfig
      * 
-     * @throws a [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.configexception.html ConfigException]]
-     *          if no "descriptor" or "type" are found in the given ConfigParams.
-     * 
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html#getasnullablestring ConfigParams.getAsNullableString]] (in the PipServices "Commons" package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html#fromstring Descriptor.fromString]] (in the PipServices "Commons" package)
-     * @see [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html#fromstring TypeDescriptor.fromString]] (in the PipServices "Commons" package)
-     * @see [[constructor]]
+     * @throws ConfigException when neither component descriptor or type is found.
      */
     public static fromConfig(config: ConfigParams): ComponentConfig {
         var descriptor = Descriptor.fromString(config.getAsNullableString("descriptor"));

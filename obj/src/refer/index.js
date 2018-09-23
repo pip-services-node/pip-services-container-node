@@ -3,6 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @module refer
  * @preferred
+ *
+ * Todo: Rewrite the description.
+ *
  * Provides the inversion of control design pattern but does not contain the fully
  * functional container (we can just only create a class that will set various references).
  *
