@@ -49,36 +49,36 @@ import { ContainerReferences } from './refer/ContainerReferences';
  * 
  * ### Configuration parameters ###
  * 
- * name: 					the context (container or process) name
- * description: 		   	human-readable description of the context
- * properties: 			    entire section of additional descriptive properties
- * 	 ...
+ * - name: 					the context (container or process) name
+ * - description: 		   	human-readable description of the context
+ * - properties: 			    entire section of additional descriptive properties
+ * 	   - ...
  * 
  * ### Example ###
  * 
- * ======= config.yml ========
- * - descriptor: mygroup:mycomponent1:default:default:1.0
- *   param1: 123
- *   param2: ABC
+ *     ======= config.yml ========
+ *     - descriptor: mygroup:mycomponent1:default:default:1.0
+ *       param1: 123
+ *       param2: ABC
+ *     
+ *     - type: mycomponent2,mypackage
+ *       param1: 321
+ *       param2: XYZ
+ *     ============================
  * 
- * - type: mycomponent2,mypackage
- *   param1: 321
- *   param2: XYZ
- * ============================
- * 
- * let container = new Container();
- * container.addFactory(new MyComponentFactory());
- * 
- * let parameters = ConfigParams.fromValue(process.env);
- * container.readConfigFromFile("123", "./config/config.yml", parameters);
- * 
- * container.open("123", (err) => {
- *     console.log("Container is opened");
- *     ...
- *     container.close("123", (err) => {
- *        console.log("Container is closed");
+ *     let container = new Container();
+ *     container.addFactory(new MyComponentFactory());
+ *     
+ *     let parameters = ConfigParams.fromValue(process.env);
+ *     container.readConfigFromFile("123", "./config/config.yml", parameters);
+ *     
+ *     container.open("123", (err) => {
+ *         console.log("Container is opened");
+ *         ...
+ *         container.close("123", (err) => {
+ *             console.log("Container is closed");
+ *         });
  *     });
- * });
  */
 export class Container implements IConfigurable, IReferenceable, IUnreferenceable, IOpenable {
     protected _logger: ILogger = new NullLogger();

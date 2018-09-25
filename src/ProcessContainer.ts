@@ -21,10 +21,10 @@ import { Container } from './Container';
  * 
  * ### Example ###
  * 
- * let container = new ProcessContainer();
- * container.addFactory(new MyComponentFactory());
- * 
- * container.run(process.args);
+ *     let container = new ProcessContainer();
+ *     container.addFactory(new MyComponentFactory());
+ *     
+ *     container.run(process.args);
  */
 export class ProcessContainer extends Container {
     protected _configPath: string = './config/config.yml';
