@@ -70,24 +70,10 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Stores configuration parameters for components of a given description or type.</p>
+						<p>Configuration of a component inside a container.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>see</dt>
-						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html" class="external">Descriptor</a> (in the PipServices &quot;Commons&quot; package)</p>
-						</dd>
-						<dt>see</dt>
-						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html" class="external">TypeDescriptor</a> (in the PipServices &quot;Commons&quot; package)</p>
-						</dd>
-						<dt>see</dt>
-						<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; package)</p>
-							<h3 id="examples">Examples</h3>
-							<pre><code><span class="hljs-keyword">public</span> MyMethod(<span class="hljs-built_in">config</span>: ConfigParams) {
-    let componentConfig = ComponentConfig.fromConfig(<span class="hljs-built_in">config</span>);
-    ...
-}
-</code></pre></dd>
-					</dl>
+					<p>The configuration includes type information or descriptor,
+					and component configuration parameters.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,25 +123,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ComponentConfig.ts#L22">config/ComponentConfig.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ComponentConfig.ts#L13">config/ComponentConfig.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a new ComponentConfig object. Can be configured with a Descriptor
-									or TypeDescriptor and a set of ConfigParams (if a pair of them are given).</p>
+									<p>Creates a new instance of the component configuration.</p>
 								</div>
-								<dl class="tsd-comment-tags">
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html" class="external">Descriptor</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html" class="external">TypeDescriptor</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -163,7 +137,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> descriptor: <span class="tsd-signature-type">Descriptor</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>(optional) the component&#39;s Descriptor.</p>
+											<p>(optional) a components descriptor (locator).</p>
 										</div>
 									</div>
 								</li>
@@ -171,7 +145,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">TypeDescriptor</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>(optional) the component&#39;s TypeDescriptor.</p>
+											<p>(optional) a components type descriptor.</p>
 										</div>
 									</div>
 								</li>
@@ -179,7 +153,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> config: <span class="tsd-signature-type">ConfigParams</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>(optional) the ConfigParams to store.</p>
+											<p>(optional) component configuration parameters.</p>
 										</div>
 									</div>
 								</li>
@@ -197,7 +171,7 @@
 					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ConfigParams</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ComponentConfig.ts#L44">config/ComponentConfig.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ComponentConfig.ts#L30">config/ComponentConfig.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -207,7 +181,7 @@
 					<div class="tsd-signature tsd-kind-icon">descriptor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Descriptor</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ComponentConfig.ts#L42">config/ComponentConfig.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ComponentConfig.ts#L28">config/ComponentConfig.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -217,7 +191,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TypeDescriptor</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ComponentConfig.ts#L43">config/ComponentConfig.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ComponentConfig.ts#L29">config/ComponentConfig.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -234,31 +208,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ComponentConfig.ts#L62">config/ComponentConfig.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ComponentConfig.ts#L41">config/ComponentConfig.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Static method that converts ConfigParams into a ContainerConfig object. The ConfigParams
-										that are passed need to contain a &quot;descriptor&quot; or &quot;type&quot;, by which the ContainerConfig
-									can be identified.</p>
+									<p>Creates a new instance of ComponentConfig based on
+									section from container configuration.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
-									<dd><p>a <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/errors.configexception.html" class="external">ConfigException</a>
-										if no &quot;descriptor&quot; or &quot;type&quot; are found in the given ConfigParams.</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html#getasnullablestring" class="external">ConfigParams.getAsNullableString</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/refer.descriptor.html#fromstring" class="external">Descriptor.fromString</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/reflect.typedescriptor.html#fromstring" class="external">TypeDescriptor.fromString</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="config.componentconfig.html#constructor">constructor</a></p>
+									<dd><p>ConfigException when neither component descriptor or type is found.</p>
 									</dd>
 								</dl>
 							</div>
@@ -267,12 +227,12 @@
 								<li>
 									<h5>config: <span class="tsd-signature-type">ConfigParams</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>the ConfigParams to convert. Must contain a &quot;descriptor&quot; or &quot;type&quot;.</p>
+										<p>component parameters from container configuration</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.componentconfig.html" class="tsd-signature-type">ComponentConfig</a></h4>
-							<p>the generated ComponentConfig object.</p>
+							<p>a newly created ComponentConfig</p>
 						</li>
 					</ul>
 				</section>

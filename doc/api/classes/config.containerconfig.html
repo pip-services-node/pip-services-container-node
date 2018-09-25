@@ -70,20 +70,12 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A ContainerConfig object consists of an array of <a href="config.componentconfig.html">ComponentConfigs</a>,
-						which can be used to configure the components that are running inside a given container.</p>
+						<p>Container configuration defined as a list of component configurations.</p>
 					</div>
 					<dl class="tsd-comment-tags">
 						<dt>see</dt>
 						<dd><p><a href="config.componentconfig.html">ComponentConfig</a></p>
-							<h3 id="examples">EXamples</h3>
-							<pre><code><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyMethod</span>(<span class="hljs-params">config: ConfigParams, <span class="hljs-keyword">value</span>: any</span>) </span>{
-    <span class="hljs-keyword">let</span> containerConfig1 = ContainerConfig.fromValue(<span class="hljs-keyword">value</span>);
-    ...
-    <span class="hljs-keyword">let</span> containerConfig2 = ContainerConfig.fromConfig(config);
-    ...
-}
-</code></pre></dd>
+						</dd>
 					</dl>
 				</div>
 			</section>
@@ -105,8 +97,7 @@
 				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>n: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]: </span><a href="config.componentconfig.html" class="tsd-signature-type">ComponentConfig</a></div>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A ContainerConfig object consists of an array of <a href="config.componentconfig.html">ComponentConfigs</a>,
-						which can be used to configure the components that are running inside a given container.</p>
+						<p>Container configuration defined as a list of component configurations.</p>
 					</div>
 				</div>
 			</section>
@@ -179,13 +170,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfig.ts#L21">config/ContainerConfig.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ContainerConfig.ts#L11">config/ContainerConfig.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a new ContainerConfig object. Can be initialized with an array
-									of <a href="config.componentconfig.html">ComponentConfigs</a> (if given).</p>
+									<p>Creates a new instance of container configuration.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,8 +184,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> components: <a href="config.componentconfig.html" class="tsd-signature-type">ComponentConfig</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>(optional) the array of <a href="config.componentconfig.html">ComponentConfigs</a> to
-											initialize this ContainerConfig with.</p>
+											<p>(optional) a list of component configurations.</p>
 										</div>
 									</div>
 								</li>
@@ -924,32 +913,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfig.ts#L58">config/ContainerConfig.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ContainerConfig.ts#L46">config/ContainerConfig.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Static method that converts ConfigParams into a ContainerConfig object.</p>
+									<p>Creates a new ContainerConfig object based on configuration parameters.
+									Each section in the configuration parameters is converted into a component configuration.</p>
 								</div>
-								<dl class="tsd-comment-tags">
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html" class="external">ConfigParams</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
-									<dt>see</dt>
-									<dd><p><a href="config.componentconfig.html#fromconfig">ComponentConfig.fromConfig</a></p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>config: <span class="tsd-signature-type">ConfigParams</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the ConfigParams to convert.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h4>
+							<p>a new ContainerConfig object.</p>
 						</li>
 					</ul>
 				</section>
@@ -963,17 +943,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/f983105/src/config/ContainerConfig.ts#L45">config/ContainerConfig.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/config/ContainerConfig.ts#L34">config/ContainerConfig.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Static method that converts a value into a ContainerConfig object.</p>
+									<p>Creates a new ContainerConfig object filled with key-value pairs from specified object.
+									The value is converted into ConfigParams object which is used to create the object.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>see</dt>
-									<dd><p><a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/classes/config.configparams.html#fromvalue" class="external">ConfigParams.fromValue</a> (in the PipServices &quot;Commons&quot; package)</p>
-									</dd>
 									<dt>see</dt>
 									<dd><p><a href="config.containerconfig.html#fromconfig">fromConfig</a></p>
 									</dd>
@@ -984,11 +962,12 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>the value to convert.</p>
+										<p>an object with key-value pairs used to initialize a new ContainerConfig.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></h4>
+							<p>a new ContainerConfig object.</p>
 						</li>
 					</ul>
 				</section>
