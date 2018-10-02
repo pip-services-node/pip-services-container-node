@@ -20,10 +20,10 @@ const Container_1 = require("./Container");
  *
  * ### Example ###
  *
- * let container = new ProcessContainer();
- * container.addFactory(new MyComponentFactory());
+ *     let container = new ProcessContainer();
+ *     container.addFactory(new MyComponentFactory());
  *
- * container.run(process.args);
+ *     container.run(process.args);
  */
 class ProcessContainer extends Container_1.Container {
     /**

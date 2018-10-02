@@ -20,13 +20,13 @@ const ContainerReferences_1 = require("./refer/ContainerReferences");
  *
  * On container start it performs the following actions:
  * - Creates components using their types or calls registered factories to create components using their locators
- * - Configures components that implement [[IConfigurable]] interface and passes them their configuration parameters
- * - Sets references to components that implement [[IReferenceable]] interface and passes them references of all components in the container
- * - Opens components that implement [[IOpenable]] interface
+ * - Configures components that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html IConfigurable interface]] and passes them their configuration parameters
+ * - Sets references to components that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html IReferenceable interface]] and passes them references of all components in the container
+ * - Opens components that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable interface]]
  *
  * On container stop actions are performed in reversed order:
- * - Closes components that implement [[IClosable]] interface
- * - Unsets references in components that implement [[IUnreferenceable]] interface
+ * - Closes components that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iclosable.html ICloseable interface]]
+ * - Unsets references in components that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.iunreferenceable.html IUnreferenceable interface]]
  * - Destroys components in the container.
  *
  * The component configuration can be parameterized by dynamic values. That allows specialized containers
@@ -41,36 +41,36 @@ const ContainerReferences_1 = require("./refer/ContainerReferences");
  *
  * ### Configuration parameters ###
  *
- * name: 					the context (container or process) name
- * description: 		   	human-readable description of the context
- * properties: 			    entire section of additional descriptive properties
- * 	 ...
+ * - name: 					the context (container or process) name
+ * - description: 		   	human-readable description of the context
+ * - properties: 			    entire section of additional descriptive properties
+ * 	   - ...
  *
  * ### Example ###
  *
- * ======= config.yml ========
- * - descriptor: mygroup:mycomponent1:default:default:1.0
- *   param1: 123
- *   param2: ABC
+ *     ======= config.yml ========
+ *     - descriptor: mygroup:mycomponent1:default:default:1.0
+ *       param1: 123
+ *       param2: ABC
  *
- * - type: mycomponent2,mypackage
- *   param1: 321
- *   param2: XYZ
- * ============================
+ *     - type: mycomponent2,mypackage
+ *       param1: 321
+ *       param2: XYZ
+ *     ============================
  *
- * let container = new Container();
- * container.addFactory(new MyComponentFactory());
+ *     let container = new Container();
+ *     container.addFactory(new MyComponentFactory());
  *
- * let parameters = ConfigParams.fromValue(process.env);
- * container.readConfigFromFile("123", "./config/config.yml", parameters);
+ *     let parameters = ConfigParams.fromValue(process.env);
+ *     container.readConfigFromFile("123", "./config/config.yml", parameters);
  *
- * container.open("123", (err) => {
- *     console.log("Container is opened");
- *     ...
- *     container.close("123", (err) => {
- *        console.log("Container is closed");
+ *     container.open("123", (err) => {
+ *         console.log("Container is opened");
+ *         ...
+ *         container.close("123", (err) => {
+ *             console.log("Container is closed");
+ *         });
  *     });
- * });
  */
 class Container {
     /**

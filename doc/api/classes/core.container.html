@@ -78,14 +78,14 @@
 					<p>On container start it performs the following actions:</p>
 					<ul>
 						<li>Creates components using their types or calls registered factories to create components using their locators</li>
-						<li>Configures components that implement [[IConfigurable]] interface and passes them their configuration parameters</li>
-						<li>Sets references to components that implement [[IReferenceable]] interface and passes them references of all components in the container</li>
-						<li>Opens components that implement [[IOpenable]] interface</li>
+						<li>Configures components that implement <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/config.iconfigurable.html" class="external">IConfigurable interface</a> and passes them their configuration parameters</li>
+						<li>Sets references to components that implement <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.ireferenceable.html" class="external">IReferenceable interface</a> and passes them references of all components in the container</li>
+						<li>Opens components that implement <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html" class="external">IOpenable interface</a></li>
 					</ul>
 					<p>On container stop actions are performed in reversed order:</p>
 					<ul>
-						<li>Closes components that implement [[IClosable]] interface</li>
-						<li>Unsets references in components that implement [[IUnreferenceable]] interface</li>
+						<li>Closes components that implement <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iclosable.html" class="external">ICloseable interface</a></li>
+						<li>Unsets references in components that implement <a href="https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/refer.iunreferenceable.html" class="external">IUnreferenceable interface</a></li>
 						<li>Destroys components in the container.</li>
 					</ul>
 					<p>The component configuration can be parameterized by dynamic values. That allows specialized containers
@@ -206,7 +206,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L88">Container.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L88">Container.ts:88</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,7 +246,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 					<div class="tsd-signature tsd-kind-icon">_config<span class="tsd-signature-symbol">:</span> <a href="config.containerconfig.html" class="tsd-signature-type">ContainerConfig</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L87">Container.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L87">Container.ts:87</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -256,7 +256,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 					<div class="tsd-signature tsd-kind-icon">_factories<span class="tsd-signature-symbol">:</span> <a href="build.defaultcontainerfactory.html" class="tsd-signature-type">DefaultContainerFactory</a><span class="tsd-signature-symbol"> =&nbsp;new DefaultContainerFactory()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L85">Container.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L85">Container.ts:85</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -266,7 +266,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 					<div class="tsd-signature tsd-kind-icon">_info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContextInfo</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L86">Container.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L86">Container.ts:86</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -276,7 +276,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 					<div class="tsd-signature tsd-kind-icon">_logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ILogger</span><span class="tsd-signature-symbol"> =&nbsp;new NullLogger()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L84">Container.ts:84</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L84">Container.ts:84</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -286,7 +286,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 					<div class="tsd-signature tsd-kind-icon">_references<span class="tsd-signature-symbol">:</span> <a href="refer.containerreferences.html" class="tsd-signature-type">ContainerReferences</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L88">Container.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L88">Container.ts:88</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -303,7 +303,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L154">Container.ts:154</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L154">Container.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -335,7 +335,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L222">Container.ts:222</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L222">Container.ts:222</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -390,7 +390,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L106">Container.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L106">Container.ts:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -421,7 +421,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L163">Container.ts:163</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L163">Container.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -444,7 +444,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L173">Container.ts:173</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L173">Container.ts:173</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -499,7 +499,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L118">Container.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L118">Container.ts:118</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -543,7 +543,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L128">Container.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L128">Container.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -574,7 +574,7 @@ container.open(<span class="hljs-string">"123"</span>, <span class="hljs-functio
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/8023d39/src/Container.ts#L135">Container.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/pip-services-node/pip-services-container-node/blob/cccb839/src/Container.ts#L135">Container.ts:135</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

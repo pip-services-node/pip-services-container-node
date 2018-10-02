@@ -5,8 +5,8 @@ const pip_services_commons_node_2 = require("pip-services-commons-node");
 const ReferencesDecorator_1 = require("./ReferencesDecorator");
 /**
  * References decorator that automatically opens to newly added components
- * that implement IOpenable interface and closes removed components
- * that implement IClosable interface.
+ * that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable interface]] and closes removed components
+ * that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iclosable.html ICloseable interface]].
  */
 class RunReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator {
     /**

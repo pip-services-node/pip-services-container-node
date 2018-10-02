@@ -8,8 +8,8 @@ import { ReferencesDecorator } from './ReferencesDecorator';
 
 /**
  * References decorator that automatically opens to newly added components
- * that implement IOpenable interface and closes removed components
- * that implement IClosable interface.
+ * that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable interface]] and closes removed components
+ * that implement [[https://rawgit.com/pip-services-node/pip-services-commons-node/master/doc/api/interfaces/run.iclosable.html ICloseable interface]].
  */
 export class RunReferencesDecorator extends ReferencesDecorator implements IOpenable {
     public _opened: boolean = false;

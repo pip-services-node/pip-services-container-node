@@ -13,10 +13,10 @@ import { Container } from './Container';
  *
  * ### Example ###
  *
- * let container = new ProcessContainer();
- * container.addFactory(new MyComponentFactory());
+ *     let container = new ProcessContainer();
+ *     container.addFactory(new MyComponentFactory());
  *
- * container.run(process.args);
+ *     container.run(process.args);
  */
 export declare class ProcessContainer extends Container {
     protected _configPath: string;

@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @module config
- * @preferred
  *
  * Todo: Rewrite the description.
  *
+ * @preferred
  * Container configuration serves as a recipe for instantiating and
  * configuring components inside the container.
  *
