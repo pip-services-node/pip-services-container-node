@@ -1,5 +1,5 @@
 {
-    "name": "pip-services-commons",
+    "name": "pip-services-container",
     "registry": "pipdevs",
     "version": "3.0.3",
     "build": "0"
